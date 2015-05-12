@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="GpiERGenNHibernate"
+		                   namespace="GpiERGenNHibernate.EN.GpiER">
+			<class name="ClienteEN" table="[Cliente]">
+						<id name="Nif" column="[nif]"/>
+					<property name="Nombre" type="string"> 
+						<column name="[nombre]"  not-null="true"/>
+					</property>
+					<property name="Direccion" type="string"> 
+						<column name="[direccion]"  not-null="true"/>
+					</property>
+					<property name="Provincia" type="string"> 
+						<column name="[provincia]"  not-null="true"/>
+					</property>
+					<property name="Email" type="string"> 
+						<column name="[email]"  not-null="true"/>
+					</property>
+					<property name="DatosBancarios" type="string"> 
+						<column name="[datosBancarios]"  not-null="true"/>
+					</property>
+					<property name="DiasPago" type="string"> 
+						<column name="[diasPago]"  not-null="true"/>
+					</property>
+					<property name="TipoDescuento" type="string"> 
+						<column name="[tipoDescuento]"  not-null="true"/>
+					</property>
+					<property name="RiesgosPermitidos" type="string"> 
+						<column name="[riesgosPermitidos]"  not-null="true"/>
+					</property>
+					<property name="DatosContables" type="string"> 
+						<column name="[datosContables]"  not-null="true"/>
+					</property>
+					<property name="DireccionEnvio" type="string"> 
+						<column name="[direccionEnvio]"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		  			
+						<bag name="Usuario" table="[cliente_usuario]"  >
+							<key>
+									<column name="[FK_nif_idCliente]"/>
+							</key>
+      						<many-to-many class="GpiERGenNHibernate.EN.GpiER.UsuarioEN">
+									<column name="[FK_email_idUsuario]"/>
+      						</many-to-many>
+    					</bag>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="ClienteENReadAllHQL">from ClienteEN</query>
+		</hibernate-mapping>
+	

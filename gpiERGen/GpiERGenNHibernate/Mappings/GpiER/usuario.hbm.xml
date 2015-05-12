@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="GpiERGenNHibernate"
+		                   namespace="GpiERGenNHibernate.EN.GpiER">
+			<class name="UsuarioEN" table="[Usuario]">
+						<id name="Email" column="[email]"/>
+					<property name="Nick" type="string"> 
+						<column name="[nick]"  unique="true" not-null="true"/>
+					</property>
+					<property name="Password" type="string"> 
+						<column name="[password]"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+		  			
+						<bag name="Cliente" table="[cliente_usuario]" inverse="true" >
+							<key>
+									<column name="[FK_email_idUsuario]"/>
+							</key>
+      						<many-to-many class="GpiERGenNHibernate.EN.GpiER.ClienteEN">
+									<column name="[FK_nif_idCliente]"/>
+      						</many-to-many>
+    					</bag>
+			
+		  			
+						<bag name="Proveedor" table="[proveedor_usuario]" inverse="true" >
+							<key>
+									<column name="[FK_email_idUsuario]"/>
+							</key>
+      						<many-to-many class="GpiERGenNHibernate.EN.GpiER.ProveedorEN">
+									<column name="[FK_nif_idProveedor]"/>
+      						</many-to-many>
+    					</bag>
+					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="UsuarioENReadAllHQL">from UsuarioEN</query>
+		</hibernate-mapping>
+	
