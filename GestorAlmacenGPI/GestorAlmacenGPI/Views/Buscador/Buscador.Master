@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Views/Shared/Site.Master" AutoEventWireup="true" CodeBehind="Buscador.Master.cs" 
+Inherits="StockManager.Models.BuscadorModels" %>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2><asp:ContentPlaceHolder ID="SectionTitle" runat="server" /></h2>
+            </div>
+            <div class="col-sm-4 margin-top padding-top">
+                <form id="formBuscar" method="get" >
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" id="TextoBusqueda" name="TextoBusqueda" class="form-control" />
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default" ><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+
+        </div>
+    <div class="footer">
+        
+    </div>
+</body>
+</html>
+
+
+</asp:Content>
+

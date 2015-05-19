@@ -1,0 +1,12 @@
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\bin\GestorAlmacenGPI.dll
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\bin\GestorAlmacenGPI.pdb
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\obj\Debug\GestorAlmacenGPI.dll
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\obj\Debug\GestorAlmacenGPI.pdb
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\obj\Debug\GestorAlmacenGPI.csprojResolveAssemblyReference.cache
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\bin\hibernate.cfg.xml
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\bin\GpiERGenNHibernate.dll
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\bin\NHibernate.dll
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\bin\Iesi.Collections.dll
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\bin\Antlr3.Runtime.dll
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\bin\log4net.dll
+C:\Users\Paco\Documents\GitHub\GPI\GestorAlmacenGPI\GestorAlmacenGPI\bin\GpiERGenNHibernate.pdb
