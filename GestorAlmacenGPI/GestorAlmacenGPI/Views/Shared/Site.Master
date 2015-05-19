@@ -27,7 +27,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active"><%: Url.Action("Home", new { controller = "Home"})%></li>
+            <li class="active"><%: Html.ActionLink("Home", "Index", "Home")%></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Listar<span class="caret"></span></a>
                 <ul class="dropdown-menu">
