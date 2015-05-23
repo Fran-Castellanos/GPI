@@ -29,19 +29,13 @@
           <ul class="nav navbar-nav">
             <li class="active"><%: Html.ActionLink("Home", "Index", "Home")%></li>
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Listar<span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestión<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="<%= Url.Action("ListaClientes", new {controller = "Clientes"}) %>">Lista de clientes</a></li>
-                    <li><a href="<%= Url.Action("ListaProveedores", new {controller = "Proveedores"}) %>">Lista de proveedores</a></li> 
+                    <li><a href="<%= Url.Action("ListaClientes", new {controller = "Clientes"}) %>">Gestión de clientes</a></li>
+                    <li><a href="<%= Url.Action("ListaProveedores", new {controller = "Proveedores"}) %>">Gestión de proveedores</a></li> 
                 </ul>
             </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Añadir<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="<%= Url.Action("NewCliente", new {controller = "Clientes"}) %>">Añadir Cliente</a></li>  
-                    <li><a href="<%= Url.Action("NewProveedor", new {controller = "Proveedores"}) %>">Añadir Proveedor</a></li>                    
-                </ul>
-            </li>
+            
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mensaje<span class="caret"></span></a>
                 <ul class="dropdown-menu">

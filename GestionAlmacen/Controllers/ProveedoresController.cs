@@ -62,9 +62,9 @@ namespace StockManager.Controllers
 
         // GET: /Proveedores/EditProveedor
         [Authorize]
-        public ActionResult EditProveedor(string cif)
+        public ActionResult EditProveedor(string nif)
         {
-            ProveedorEN en = proCEN.DameProveedorPorOID(cif);
+            ProveedorEN en = proCEN.DameProveedorPorOID(nif);
             return View(en);
         }
 

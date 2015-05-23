@@ -14,8 +14,8 @@ Lista de clientes
         <asp:GridView ID="gridClientes" runat="server" CellPadding="4" CssClass="table table-striped"
             onselectedindexchanged="gridClientes_SelectedIndexChanged">
             <Columns>
-                <asp:HyperLinkField DataNavigateUrlFields="CIF" DataNavigateUrlFormatString="~/Clientes/EditCliente/?CIF={0}" Text="Editar" > </asp:HyperLinkField>
-                <asp:HyperLinkField DataNavigateUrlFields="CIF" DataNavigateUrlFormatString="~/Clientes/BorrarCliente/?CIF={0}" Text="Borrar"> </asp:HyperLinkField>
+                <asp:HyperLinkField DataNavigateUrlFields="Nif" DataNavigateUrlFormatString="~/Clientes/EditCliente/?nif={0}" Text="Editar" > </asp:HyperLinkField>
+                <asp:HyperLinkField DataNavigateUrlFields="Nif" DataNavigateUrlFormatString="~/Clientes/BorrarCliente/?nif={0}" Text="Borrar"> </asp:HyperLinkField>
             </Columns>
         </asp:GridView>
     </form>

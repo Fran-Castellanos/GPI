@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="MODIFICAR PROVEEDOR" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" AutoEventWireup="true"
-    Inherits="System.Web.Mvc.ViewPage<StockManagerOOH4RIAGenNHibernate.EN.Default_.PROVEEDOREN>" %>
+    Inherits="System.Web.Mvc.ViewPage<GpiERGenNHibernate.EN.GpiER.ProveedorEN>" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="TitleContent">
 </asp:Content>
@@ -26,21 +26,21 @@
         <div class="row">
             <div class="col-md-8"></div>
             <div class="col-md-4">
-                <h3 class="text-left">ID: <%: Html.DisplayTextFor(m => m.CIF) %></h3>
-                <h3>CIF De La Empresa Proveedora: </h3><%: Html.TextBoxFor(m => m.CIF, new { @class = "form-control" })%>
+                <h3 class="text-left">NIF del proveedor: <%: Html.DisplayTextFor(m => m.Nif) %></h3>
+                
             </div>
         </div>
         <div class="row">
             <div class="col-md-8">
             <p>&nbsp;</p>
                 <h4>NOMBRE</h4>
-                <%: Html.TextBoxFor(m => m.Name, new { @class = "form-control" })%>
+                <%: Html.TextBoxFor(m => m.Nombre, new { @class = "form-control" })%>
             </div>
             <div class="col-md-4">
             <p>&nbsp;</p>
                 <h4>FECHA DE REGISTRO</h4>
                 
-                <%: Html.TextBoxFor(m => m.FechaRegistro, new { @class = "form-control" })%>
+               
             </div>   
         </div>
         <div class="row">
@@ -48,7 +48,7 @@
             <p>&nbsp;</p>
                 <h4>CORREO</h4>
                 
-                <%: Html.TextBoxFor(m => m.Correo, new { @class = "form-control" })%>
+                <%: Html.TextBoxFor(m => m.Email, new { @class = "form-control" })%>
             </div>
             <div class="col-md-6">
             <p>&nbsp;</p>
@@ -60,9 +60,9 @@
         <div class="row">
             <div class="col-md-12">
             <p>&nbsp;</p>
-                <h4>DESCRIPCIÓN</h4>
+                <h4></h4>
                 
-                <%: Html.TextAreaFor(m => m.Descripcion, new { @class = "form-control" })%>
+              
             </div>
         </div>
         <div class="row">

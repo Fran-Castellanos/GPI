@@ -14,8 +14,8 @@ Lista de proveedores
         <asp:GridView ID="gridClientes" runat="server" CellPadding="4" CssClass="table table-striped"
             onselectedindexchanged="gridClientes_SelectedIndexChanged">
             <Columns>
-                <asp:HyperLinkField DataNavigateUrlFields="CIF" DataNavigateUrlFormatString="~/Proveedores/EditProveedor?CIF={0}" Text="Editar" > </asp:HyperLinkField>
-                <asp:HyperLinkField DataNavigateUrlFields="CIF" DataNavigateUrlFormatString="~/Proveedores/BorrarProveedor?CIF={0}" Text="Borrar"> </asp:HyperLinkField>
+                <asp:HyperLinkField DataNavigateUrlFields="Nif" DataNavigateUrlFormatString="~/Proveedores/EditProveedor?nif={0}" Text="Editar" > </asp:HyperLinkField>
+                <asp:HyperLinkField DataNavigateUrlFields="Nif" DataNavigateUrlFormatString="~/Proveedores/BorrarProveedor?nif={0}" Text="Borrar"> </asp:HyperLinkField>
             </Columns>
         </asp:GridView>
     </form>
