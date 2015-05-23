@@ -91,13 +91,6 @@
     </Compile>
     <Compile Include="Models\CorreoModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Buscador\RangoFechas.Master.cs">
-      <DependentUpon>RangoFechas.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Buscador\RangoFechas.Master.designer.cs">
-      <DependentUpon>RangoFechas.Master</DependentUpon>
-    </Compile>
     <Compile Include="Views\Clientes\ListaClientes.aspx.cs">
       <DependentUpon>ListaClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,7 +247,6 @@
     <None Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Buscador\Buscador.Master" />
     <None Include="Content\chartist\chartist.min.js.map" />
-    <Content Include="Views\Buscador\RangoFechas.Master" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\GitHub\GPI\gpiERGen\GpiERGenNHibernate\GpiERGenNHibernate.csproj">
