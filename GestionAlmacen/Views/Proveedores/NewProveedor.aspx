@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<form data-toggle="validator" role="form" method="post">
+<form data-toggle="validator" role="form" method="post" runat="server">
     <div class="jumbotron">
            <h2>Añadir Proveedor</h2> 
        </div>
@@ -47,9 +47,10 @@
                     </div>
                </div>
             </div>
-           <div class="text-right margin">
-               <input type="submit" class="btn btn-default" value="Añadir">
-           </div>
+           <div class="row margin-top text-right">
+            <div class="col-md-2 col-md-offset-8"><button class="btn btn-success" type="submit">Guardar proveedor</button></div>
+            <div class="col-md-2"><button class="btn btn-danger" type="button" onclick="location.href = '../../Proveedores/ListaProveedores'">Cancelar</button></div>
+        </div>
         <% } %>
         </form>
 

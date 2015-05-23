@@ -48,9 +48,10 @@
                     </div>
                </div>
             </div>
-           <div class="text-right margin">
-               <input type="submit" class="btn btn-default" value="Añadir">
-           </div>
+           <div class="row margin-top text-right">
+            <div class="col-md-2 col-md-offset-8"><button class="btn btn-success" type="submit">Guardar cliente</button></div>
+            <div class="col-md-2"><button class="btn btn-danger" type="button" onclick="location.href = '../../Clientes/ListaClientes'">Cancelar</button></div>
+        </div>
         <% } %>
     </form>
 

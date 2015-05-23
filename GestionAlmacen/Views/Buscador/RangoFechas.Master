@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Views/Shared/Site.Master" CodeBehind="RangoFechas.master.cs" 
-Inherits="StockManager.Models.BuscadorModels" %>
+Inherits="GestionStockGPI.Models.BuscadorModels" %>
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="TitleContent">
 <asp:ContentPlaceHolder ID="HeadContent" runat="server">

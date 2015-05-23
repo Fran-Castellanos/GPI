@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StockManager")]
+[assembly: AssemblyTitle("GestionStockGPI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("VulcanoIDE")]
-[assembly: AssemblyProduct("StockManager")]
+[assembly: AssemblyProduct("GestionStockGPI")]
 [assembly: AssemblyCopyright("Copyright © VulcanoIDE 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
