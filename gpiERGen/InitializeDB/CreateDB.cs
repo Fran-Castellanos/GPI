@@ -114,128 +114,124 @@ public static void InitializeData ()
                  * //Define Album
                  * //GpiERGenNHibernate.CEN.Mediaplayer.AlbumCEN albumCEN = new GpiERGenNHibernate.CEN.Mediaplayer.AlbumCEN();
                  * //albumCEN.New_("Album 1", "This is a Album 1", artists, musicTracks);*/
+
+                // ------------------------- Insertar Cliente ---------------------------
+
+                ClienteEN cli1 = new ClienteEN ();
+
+                cli1.Nif = "12345678A";
+                cli1.Email = "cliente1@cliente.com";
+                cli1.Nombre = "Cliente1";
+                cli1.Telefono = "654321789";
+                cli1.Pais = "España";
+                cli1.Provincia = "Albacete";
+                cli1.RiesgosPermitidos = 500;
+                cli1.TipoDescuento = TipoDescuentoEnum.TIPO_1;
+                cli1.Descuento = 1;
+                IList<DateTime?  > dias = new List<DateTime?  >();
+                dias.Add (new DateTime (2015, 2, 3));
+                dias.Add (new DateTime (2015, 3, 5));
+                cli1.DiasPago = dias;
+                cli1.Direccion = "Calle Mayor nº 22, Albacete";
+                cli1.DireccionEnvio = "Calle Mayor nº 22, Albacete";
+                cli1.FechaAlta = new DateTime (2015, 04, 09);
+                cli1.FechaUltimaModificacion = new DateTime (2015, 04, 09);
+                cli1.DatosContables = "";
+                cli1.DatosBancarios = "333333333333333";
+                ClienteCEN cliCen = new ClienteCEN ();
+
+                cliCen.NuevoCliente (cli1.Nif, cli1.Nombre, cli1.Pais, cli1.Provincia, cli1.Direccion, cli1.Email, cli1.DatosBancarios, cli1.DiasPago, cli1.TipoDescuento, cli1.Descuento, cli1.RiesgosPermitidos, cli1.DatosContables, cli1.DireccionEnvio, cli1.FechaAlta, cli1.FechaUltimaModificacion, cli1.Telefono);
+
+
+                ClienteEN cli2 = new ClienteEN ();
+
+                cli2.Nif = "11111111D";
+                cli2.Email = "cliente2@cliente.com";
+                cli2.Nombre = "Cliente2";
+                cli2.Telefono = "655112233";
+                cli2.Pais = "España";
+                cli2.Provincia = "Barcelona";
+                cli2.RiesgosPermitidos = 1720;
+                cli2.TipoDescuento = TipoDescuentoEnum.TIPO_2;
+                cli2.Descuento = 2;
+                dias.Clear ();
+                dias = new List<DateTime?  >();
+                dias.Add (new DateTime (2014, 8, 10));
+                dias.Add (new DateTime (2015, 1, 11));
+                cli2.DiasPago = dias;
+                cli2.Direccion = "Calle Tomate nº 10, Barcelona";
+                cli2.DireccionEnvio = "Calle de GPI nº 4, Barcelona";
+                cli2.FechaAlta = DateTime.Now;
+                cli2.FechaUltimaModificacion = DateTime.Now;
+                cli2.DatosContables = "";
+                cli2.DatosBancarios = "22222222222222";
+
+                cliCen.NuevoCliente (cli2.Nif, cli2.Nombre, cli2.Pais, cli2.Provincia, cli2.Direccion, cli2.Email, cli2.DatosBancarios, cli2.DiasPago, cli2.TipoDescuento, cli2.Descuento, cli2.RiesgosPermitidos, cli2.DatosContables, cli2.DireccionEnvio, cli2.FechaAlta, cli2.FechaUltimaModificacion, cli2.Telefono);
+
+
+
+
+                // ------------------------- Insertar Proveedor ---------------------------
+
+                ProveedorEN pro1 = new ProveedorEN ();
+
+                pro1.Nif = "12345678C";
+                pro1.Email = "proveedor1@proveedor.com";
+                pro1.Nombre = "Proveedor1";
+                pro1.Telefono = "654321789";
+                pro1.Pais = "Francia";
+                pro1.Provincia = "Le Mans";
+                pro1.Divisa = DivisaEnum.EURO;
+                pro1.Direccion = "Calle Francia nº 45";
+                pro1.Descuento = 1;
+                pro1.DatosBancarios = "000000000000";
+                dias.Clear ();
+                dias.Add (new DateTime (2013, 1, 2));
+                dias.Add (new DateTime (2015, 3, 4));
+                pro1.DiasCobro = dias;
+
+
+                pro1.FechaAlta = new DateTime (2015, 04, 09);
+                pro1.FechaUltimaModificacion = pro1.FechaAlta;
+
+                pro1.Direccion = "Dirección de la sede del proveedor1";
+
+
+                ProveedorCEN proCen = new ProveedorCEN ();
+
+                proCen.NuevoProveedor (pro1.Nif, pro1.Nombre, pro1.Pais, pro1.Provincia, pro1.Direccion, pro1.Email, pro1.Divisa, pro1.DatosBancarios, pro1.Descuento, pro1.DiasCobro, pro1.FechaAlta, pro1.FechaUltimaModificacion, pro1.Telefono);
+
+
+
+
+                ProveedorEN pro2 = new ProveedorEN ();
+
+                pro2.Nif = "22556644H";
+                pro2.Email = "proveedor2@proveedor.com";
+                pro2.Nombre = "Proveedor2";
+                pro2.Telefono = "658787811";
+                pro2.Pais = "España";
+                pro2.Provincia = "Alicante";
+                pro2.Divisa = DivisaEnum.EURO;
+                pro2.Direccion = "Avd Madrid nº 1, Benidorm";
+                pro2.Descuento = 5;
+                pro2.DatosBancarios = "111111111111";
+                dias.Clear ();
+                dias.Add (new DateTime (2014, 7, 8));
+                dias.Add (new DateTime (2015, 4, 11));
+                pro2.DiasCobro = dias;
+
+
+                pro2.FechaAlta = new DateTime (2015, 04, 09);
+                pro2.FechaUltimaModificacion = new DateTime (2015, 5, 10);
+
+                pro2.Direccion = "Dirección de la sede del proveedor2";
+
+
+                proCen.NuevoProveedor (pro2.Nif, pro2.Nombre, pro2.Pais, pro2.Provincia, pro2.Direccion, pro2.Email, pro2.Divisa, pro2.DatosBancarios, pro2.Descuento, pro2.DiasCobro, pro2.FechaAlta, pro2.FechaUltimaModificacion, pro2.Telefono);
+
+
                 /*PROTECTED REGION END*/
-
-
-
-            // ------------------------- Insertar Cliente ---------------------------
-
-            ClienteEN cli1 = new ClienteEN();
-
-            cli1.Nif = "12345678A";
-            cli1.Email = "cliente1@cliente.com";
-            cli1.Nombre = "Cliente1";
-            cli1.Telefono = "654321789";
-            cli1.Pais = "España";
-            cli1.Provincia = "Albacete";
-            cli1.RiesgosPermitidos = 500;
-            cli1.TipoDescuento = TipoDescuentoEnum.TIPO_1;
-            cli1.Descuento = 1;
-            IList<DateTime?> dias = new List<DateTime?>();
-            dias.Add(new DateTime(2015,2,3));
-            dias.Add(new DateTime(2015,3,5));
-            cli1.DiasPago = dias;
-            cli1.Direccion = "Calle Mayor nº 22, Albacete";
-            cli1.DireccionEnvio = "Calle Mayor nº 22, Albacete";
-            cli1.FechaAlta = new DateTime(2015, 04, 09);
-            cli1.FechaUltimaModificacion = new DateTime(2015, 04, 09); 
-            cli1.DatosContables = "";
-            cli1.DatosBancarios = "333333333333333";
-            ClienteCEN cliCen = new ClienteCEN();
-
-            cliCen.NuevoCliente(cli1.Nif, cli1.Nombre, cli1.Pais, cli1.Provincia, cli1.Direccion, cli1.Email, cli1.DatosBancarios, cli1.DiasPago, cli1.TipoDescuento, cli1.Descuento, cli1.RiesgosPermitidos, cli1.DatosContables, cli1.DireccionEnvio, cli1.FechaAlta, cli1.FechaUltimaModificacion, cli1.Telefono);
-
-
-            ClienteEN cli2 = new ClienteEN();
-
-            cli2.Nif = "11111111D";
-            cli2.Email = "cliente2@cliente.com";
-            cli2.Nombre = "Cliente2";
-            cli2.Telefono = "655112233";
-            cli2.Pais = "España";
-            cli2.Provincia = "Barcelona";
-            cli2.RiesgosPermitidos = 1720;
-            cli2.TipoDescuento = TipoDescuentoEnum.TIPO_2;
-            cli2.Descuento = 2;
-            dias.Clear();
-            dias = new List<DateTime?>();
-            dias.Add(new DateTime(2014, 8,10));
-            dias.Add(new DateTime(2015, 1, 11));
-            cli2.DiasPago = dias;
-            cli2.Direccion = "Calle Tomate nº 10, Barcelona";
-            cli2.DireccionEnvio = "Calle de GPI nº 4, Barcelona";
-            cli2.FechaAlta = DateTime.Now;
-            cli2.FechaUltimaModificacion = DateTime.Now;
-            cli2.DatosContables = "";
-            cli2.DatosBancarios = "22222222222222";
-
-            cliCen.NuevoCliente(cli2.Nif, cli2.Nombre, cli2.Pais, cli2.Provincia, cli2.Direccion, cli2.Email, cli2.DatosBancarios, cli2.DiasPago, cli2.TipoDescuento, cli2.Descuento, cli2.RiesgosPermitidos, cli2.DatosContables, cli2.DireccionEnvio, cli2.FechaAlta, cli2.FechaUltimaModificacion, cli2.Telefono);
-
-
-
-
-            // ------------------------- Insertar Proveedor ---------------------------
-
-            ProveedorEN pro1 = new ProveedorEN();
-
-            pro1.Nif = "12345678C";
-            pro1.Email = "proveedor1@proveedor.com";
-            pro1.Nombre = "Proveedor1";
-            pro1.Telefono = "654321789";
-            pro1.Pais = "Francia";
-            pro1.Provincia = "Le Mans";
-            pro1.Divisa = DivisaEnum.EURO;
-            pro1.Direccion = "Calle Francia nº 45";
-            pro1.Descuento = 1;
-            pro1.DatosBancarios = "000000000000";
-            dias.Clear();
-            dias.Add(new DateTime(2013, 1, 2));
-            dias.Add(new DateTime(2015, 3, 4));
-            pro1.DiasCobro = dias;
-            
-
-            pro1.FechaAlta = new DateTime(2015, 04, 09);
-            pro1.FechaUltimaModificacion = pro1.FechaAlta;
-
-            pro1.Direccion = "Dirección de la sede del proveedor1";
-
-
-            ProveedorCEN proCen = new ProveedorCEN();
-
-            proCen.NuevoProveedor(pro1.Nif, pro1.Nombre, pro1.Pais, pro1.Provincia, pro1.Direccion, pro1.Email, pro1.Divisa, pro1.DatosBancarios, pro1.Descuento, pro1.DiasCobro, pro1.FechaAlta, pro1.FechaUltimaModificacion, pro1.Telefono);
-
-
-
-
-            ProveedorEN pro2 = new ProveedorEN();
-
-            pro2.Nif = "22556644H";
-            pro2.Email = "proveedor2@proveedor.com";
-            pro2.Nombre = "Proveedor2";
-            pro2.Telefono = "658787811";
-            pro2.Pais = "España";
-            pro2.Provincia = "Alicante";
-            pro2.Divisa = DivisaEnum.EURO;
-            pro2.Direccion = "Avd Madrid nº 1, Benidorm";
-            pro2.Descuento = 5;
-            pro2.DatosBancarios = "111111111111";
-            dias.Clear();
-            dias.Add(new DateTime(2014, 7, 8));
-            dias.Add(new DateTime(2015, 4, 11));
-            pro2.DiasCobro = dias;
-
-
-            pro2.FechaAlta = new DateTime(2015, 04, 09);
-            pro2.FechaUltimaModificacion = new DateTime(2015,5,10);
-
-            pro2.Direccion = "Dirección de la sede del proveedor2";
-
-
-            proCen.NuevoProveedor(pro2.Nif, pro2.Nombre, pro2.Pais, pro2.Provincia, pro2.Direccion, pro2.Email, pro2.Divisa, pro2.DatosBancarios, pro2.Descuento, pro2.DiasCobro, pro2.FechaAlta, pro2.FechaUltimaModificacion, pro2.Telefono);
-
-
-
-
         }
         catch (Exception ex)
         {
