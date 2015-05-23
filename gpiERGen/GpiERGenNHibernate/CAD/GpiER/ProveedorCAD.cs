@@ -87,19 +87,37 @@ public void ModificaProveedor (ProveedorEN proveedor)
                 proveedorEN.Nombre = proveedor.Nombre;
 
 
+                proveedorEN.Pais = proveedor.Pais;
+
+
+                proveedorEN.Provincia = proveedor.Provincia;
+
+
                 proveedorEN.Direccion = proveedor.Direccion;
 
 
-                proveedorEN.Descuento = proveedor.Descuento;
-
-
-                proveedorEN.DiaCobro = proveedor.DiaCobro;
+                proveedorEN.Email = proveedor.Email;
 
 
                 proveedorEN.Divisa = proveedor.Divisa;
 
 
                 proveedorEN.DatosBancarios = proveedor.DatosBancarios;
+
+
+                proveedorEN.Descuento = proveedor.Descuento;
+
+
+                proveedorEN.DiasCobro = proveedor.DiasCobro;
+
+
+                proveedorEN.FechaAlta = proveedor.FechaAlta;
+
+
+                proveedorEN.FechaUltimaModificacion = proveedor.FechaUltimaModificacion;
+
+
+                proveedorEN.Telefono = proveedor.Telefono;
 
                 session.Update (proveedorEN);
                 SessionCommit ();

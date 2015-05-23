@@ -3,15 +3,18 @@
 		                   assembly="GpiERGenNHibernate"
 		                   namespace="GpiERGenNHibernate.EN.GpiER">
 			<class name="ClienteEN" table="[Cliente]">
-						<id name="Nif" column="[nif]"/>
+						<id name="Nif" column="[nombre]"/>
 					<property name="Nombre" type="string"> 
-						<column name="[nombre]"  not-null="true"/>
+						<column name="[nif]"  not-null="true"/>
 					</property>
-					<property name="Direccion" type="string"> 
-						<column name="[direccion]"  not-null="true"/>
+					<property name="Pais" type="string"> 
+						<column name="[pais]"  not-null="true"/>
 					</property>
 					<property name="Provincia" type="string"> 
 						<column name="[provincia]"  not-null="true"/>
+					</property>
+					<property name="Direccion" type="string"> 
+						<column name="[direccion]"  not-null="true"/>
 					</property>
 					<property name="Email" type="string"> 
 						<column name="[email]"  not-null="true"/>
@@ -19,13 +22,19 @@
 					<property name="DatosBancarios" type="string"> 
 						<column name="[datosBancarios]"  not-null="true"/>
 					</property>
-					<property name="DiasPago" type="string"> 
-						<column name="[diasPago]"  not-null="true"/>
-					</property>
-					<property name="TipoDescuento" type="string"> 
+					<bag name="DiasPago" table="[diasPago]">
+						<key>
+							<column name="[Nif]"/>
+						</key>
+						<element column="[DiasPago]" type="date"/>
+    				</bag>
+					<property name="TipoDescuento" > 
 						<column name="[tipoDescuento]"  not-null="true"/>
 					</property>
-					<property name="RiesgosPermitidos" type="string"> 
+					<property name="Descuento" type="double"> 
+						<column name="[descuento]"  not-null="true"/>
+					</property>
+					<property name="RiesgosPermitidos" type="double"> 
 						<column name="[riesgosPermitidos]"  not-null="true"/>
 					</property>
 					<property name="DatosContables" type="string"> 
@@ -33,6 +42,15 @@
 					</property>
 					<property name="DireccionEnvio" type="string"> 
 						<column name="[direccionEnvio]"  not-null="true"/>
+					</property>
+					<property name="FechaAlta" type="date"> 
+						<column name="[fechaAlta]"  not-null="true"/>
+					</property>
+					<property name="FechaUltimaModificacion" type="date"> 
+						<column name="[fechaUltimaModificacion]"  not-null="true"/>
+					</property>
+					<property name="Telefono" type="string"> 
+						<column name="[telefono]"  not-null="true"/>
 					</property>
 			
 			
@@ -49,12 +67,22 @@
 		  			
 						<bag name="Usuario" table="[cliente_usuario]"  >
 							<key>
-									<column name="[FK_nif_idCliente]"/>
+									<column name="[FK_nombre_idCliente]"/>
 							</key>
       						<many-to-many class="GpiERGenNHibernate.EN.GpiER.UsuarioEN">
 									<column name="[FK_email_idUsuario]"/>
       						</many-to-many>
     					</bag>
+			
+			
+			
+			
+			
+					
+					
+					
+					
+					
 					
 					
 					

@@ -9,25 +9,31 @@ public partial class ClienteEN
  *
  */
 
-private string nombre;
-
-/**
- *
- */
-
 private string nif;
 
 /**
  *
  */
 
-private string direccion;
+private string nombre;
+
+/**
+ *
+ */
+
+private string pais;
 
 /**
  *
  */
 
 private string provincia;
+
+/**
+ *
+ */
+
+private string direccion;
 
 /**
  *
@@ -45,19 +51,31 @@ private string datosBancarios;
  *
  */
 
-private string diasPago;
+private System.Collections.Generic.IList<Nullable<DateTime> > diasPago;
 
 /**
  *
  */
 
-private string tipoDescuento;
+private GpiERGenNHibernate.Enumerated.GpiER.TipoDescuentoEnum tipoDescuento;
 
 /**
  *
  */
 
-private string riesgosPermitidos;
+private double descuento;
+
+/**
+ *
+ */
+
+private double riesgosPermitidos;
+
+/**
+ *
+ */
+
+private System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.UsuarioEN> usuario;
 
 /**
  *
@@ -75,15 +93,22 @@ private string direccionEnvio;
  *
  */
 
-private System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.UsuarioEN> usuario;
+private Nullable<DateTime> fechaAlta;
+
+/**
+ *
+ */
+
+private Nullable<DateTime> fechaUltimaModificacion;
+
+/**
+ *
+ */
+
+private string telefono;
 
 
 
-
-
-public virtual string Nombre {
-        get { return nombre; } set { nombre = value;  }
-}
 
 
 public virtual string Nif {
@@ -91,13 +116,23 @@ public virtual string Nif {
 }
 
 
-public virtual string Direccion {
-        get { return direccion; } set { direccion = value;  }
+public virtual string Nombre {
+        get { return nombre; } set { nombre = value;  }
+}
+
+
+public virtual string Pais {
+        get { return pais; } set { pais = value;  }
 }
 
 
 public virtual string Provincia {
         get { return provincia; } set { provincia = value;  }
+}
+
+
+public virtual string Direccion {
+        get { return direccion; } set { direccion = value;  }
 }
 
 
@@ -111,18 +146,28 @@ public virtual string DatosBancarios {
 }
 
 
-public virtual string DiasPago {
+public virtual System.Collections.Generic.IList<Nullable<DateTime> > DiasPago {
         get { return diasPago; } set { diasPago = value;  }
 }
 
 
-public virtual string TipoDescuento {
+public virtual GpiERGenNHibernate.Enumerated.GpiER.TipoDescuentoEnum TipoDescuento {
         get { return tipoDescuento; } set { tipoDescuento = value;  }
 }
 
 
-public virtual string RiesgosPermitidos {
+public virtual double Descuento {
+        get { return descuento; } set { descuento = value;  }
+}
+
+
+public virtual double RiesgosPermitidos {
         get { return riesgosPermitidos; } set { riesgosPermitidos = value;  }
+}
+
+
+public virtual System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.UsuarioEN> Usuario {
+        get { return usuario; } set { usuario = value;  }
 }
 
 
@@ -136,8 +181,18 @@ public virtual string DireccionEnvio {
 }
 
 
-public virtual System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.UsuarioEN> Usuario {
-        get { return usuario; } set { usuario = value;  }
+public virtual Nullable<DateTime> FechaAlta {
+        get { return fechaAlta; } set { fechaAlta = value;  }
+}
+
+
+public virtual Nullable<DateTime> FechaUltimaModificacion {
+        get { return fechaUltimaModificacion; } set { fechaUltimaModificacion = value;  }
+}
+
+
+public virtual string Telefono {
+        get { return telefono; } set { telefono = value;  }
 }
 
 
@@ -151,27 +206,29 @@ public ClienteEN()
 
 
 
-public ClienteEN(string nif, string nombre, string direccion, string provincia, string email, string datosBancarios, string diasPago, string tipoDescuento, string riesgosPermitidos, string datosContables, string direccionEnvio, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.UsuarioEN> usuario)
+public ClienteEN(string nif, string nombre, string pais, string provincia, string direccion, string email, string datosBancarios, System.Collections.Generic.IList<Nullable<DateTime> > diasPago, GpiERGenNHibernate.Enumerated.GpiER.TipoDescuentoEnum tipoDescuento, double descuento, double riesgosPermitidos, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.UsuarioEN> usuario, string datosContables, string direccionEnvio, Nullable<DateTime> fechaAlta, Nullable<DateTime> fechaUltimaModificacion, string telefono)
 {
-        this.init (nif, nombre, direccion, provincia, email, datosBancarios, diasPago, tipoDescuento, riesgosPermitidos, datosContables, direccionEnvio, usuario);
+        this.init (nif, nombre, pais, provincia, direccion, email, datosBancarios, diasPago, tipoDescuento, descuento, riesgosPermitidos, usuario, datosContables, direccionEnvio, fechaAlta, fechaUltimaModificacion, telefono);
 }
 
 
 public ClienteEN(ClienteEN cliente)
 {
-        this.init (cliente.Nif, cliente.Nombre, cliente.Direccion, cliente.Provincia, cliente.Email, cliente.DatosBancarios, cliente.DiasPago, cliente.TipoDescuento, cliente.RiesgosPermitidos, cliente.DatosContables, cliente.DireccionEnvio, cliente.Usuario);
+        this.init (cliente.Nif, cliente.Nombre, cliente.Pais, cliente.Provincia, cliente.Direccion, cliente.Email, cliente.DatosBancarios, cliente.DiasPago, cliente.TipoDescuento, cliente.Descuento, cliente.RiesgosPermitidos, cliente.Usuario, cliente.DatosContables, cliente.DireccionEnvio, cliente.FechaAlta, cliente.FechaUltimaModificacion, cliente.Telefono);
 }
 
-private void init (string nif, string nombre, string direccion, string provincia, string email, string datosBancarios, string diasPago, string tipoDescuento, string riesgosPermitidos, string datosContables, string direccionEnvio, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.UsuarioEN> usuario)
+private void init (string nif, string nombre, string pais, string provincia, string direccion, string email, string datosBancarios, System.Collections.Generic.IList<Nullable<DateTime> > diasPago, GpiERGenNHibernate.Enumerated.GpiER.TipoDescuentoEnum tipoDescuento, double descuento, double riesgosPermitidos, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.UsuarioEN> usuario, string datosContables, string direccionEnvio, Nullable<DateTime> fechaAlta, Nullable<DateTime> fechaUltimaModificacion, string telefono)
 {
         this.Nif = nif;
 
 
         this.Nombre = nombre;
 
-        this.Direccion = direccion;
+        this.Pais = pais;
 
         this.Provincia = provincia;
+
+        this.Direccion = direccion;
 
         this.Email = email;
 
@@ -181,13 +238,21 @@ private void init (string nif, string nombre, string direccion, string provincia
 
         this.TipoDescuento = tipoDescuento;
 
+        this.Descuento = descuento;
+
         this.RiesgosPermitidos = riesgosPermitidos;
+
+        this.Usuario = usuario;
 
         this.DatosContables = datosContables;
 
         this.DireccionEnvio = direccionEnvio;
 
-        this.Usuario = usuario;
+        this.FechaAlta = fechaAlta;
+
+        this.FechaUltimaModificacion = fechaUltimaModificacion;
+
+        this.Telefono = telefono;
 }
 
 public override bool Equals (object obj)

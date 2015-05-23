@@ -7,20 +7,41 @@
 					<property name="Nombre" type="string"> 
 						<column name="[nombre]"  not-null="true"/>
 					</property>
+					<property name="Pais" type="string"> 
+						<column name="[pais]"  not-null="true"/>
+					</property>
+					<property name="Provincia" type="string"> 
+						<column name="[provincia]"  not-null="true"/>
+					</property>
 					<property name="Direccion" type="string"> 
 						<column name="[direccion]"  not-null="true"/>
 					</property>
-					<property name="Descuento" type="integer"> 
-						<column name="[descuento]"  not-null="true"/>
+					<property name="Email" type="string"> 
+						<column name="[email]"  not-null="true"/>
 					</property>
-					<property name="DiaCobro" type="string"> 
-						<column name="[diaCobro]"  not-null="true"/>
-					</property>
-					<property name="Divisa" type="string"> 
+					<property name="Divisa" > 
 						<column name="[divisa]"  not-null="true"/>
 					</property>
 					<property name="DatosBancarios" type="string"> 
 						<column name="[datosBancarios]"  not-null="true"/>
+					</property>
+					<property name="Descuento" type="double"> 
+						<column name="[descuento]"  not-null="true"/>
+					</property>
+					<bag name="DiasCobro" table="[diasCobro]">
+						<key>
+							<column name="[Nif]"/>
+						</key>
+						<element column="[DiasCobro]" type="date"/>
+    				</bag>
+					<property name="FechaAlta" type="date"> 
+						<column name="[fechaAlta]"  not-null="true"/>
+					</property>
+					<property name="FechaUltimaModificacion" type="date"> 
+						<column name="[fechaUltimaModificacion]"  not-null="true"/>
+					</property>
+					<property name="Telefono" type="string"> 
+						<column name="[telefono]"  not-null="true"/>
 					</property>
 			
 			
@@ -39,6 +60,18 @@
 									<column name="[FK_email_idUsuario]"/>
       						</many-to-many>
     					</bag>
+			
+			
+			
+			
+			
+			
+					
+					
+					
+					
+					
+					
 					
 					
 					

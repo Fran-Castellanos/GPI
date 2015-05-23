@@ -10,6 +10,9 @@
 					<property name="Password" type="string"> 
 						<column name="[password]"  not-null="true"/>
 					</property>
+					<property name="FechaRegistro" type="date"> 
+						<column name="[fechaRegistro]"  not-null="true"/>
+					</property>
 			
 			
 			
@@ -20,7 +23,7 @@
 									<column name="[FK_email_idUsuario]"/>
 							</key>
       						<many-to-many class="GpiERGenNHibernate.EN.GpiER.ClienteEN">
-									<column name="[FK_nif_idCliente]"/>
+									<column name="[FK_nombre_idCliente]"/>
       						</many-to-many>
     					</bag>
 			
@@ -33,6 +36,8 @@
 									<column name="[FK_nif_idProveedor]"/>
       						</many-to-many>
     					</bag>
+			
+					
 					
 					
 					

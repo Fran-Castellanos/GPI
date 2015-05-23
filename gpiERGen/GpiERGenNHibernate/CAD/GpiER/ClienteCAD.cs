@@ -87,10 +87,13 @@ public void ModificaCliente (ClienteEN cliente)
                 clienteEN.Nombre = cliente.Nombre;
 
 
-                clienteEN.Direccion = cliente.Direccion;
+                clienteEN.Pais = cliente.Pais;
 
 
                 clienteEN.Provincia = cliente.Provincia;
+
+
+                clienteEN.Direccion = cliente.Direccion;
 
 
                 clienteEN.Email = cliente.Email;
@@ -105,6 +108,9 @@ public void ModificaCliente (ClienteEN cliente)
                 clienteEN.TipoDescuento = cliente.TipoDescuento;
 
 
+                clienteEN.Descuento = cliente.Descuento;
+
+
                 clienteEN.RiesgosPermitidos = cliente.RiesgosPermitidos;
 
 
@@ -112,6 +118,15 @@ public void ModificaCliente (ClienteEN cliente)
 
 
                 clienteEN.DireccionEnvio = cliente.DireccionEnvio;
+
+
+                clienteEN.FechaAlta = cliente.FechaAlta;
+
+
+                clienteEN.FechaUltimaModificacion = cliente.FechaUltimaModificacion;
+
+
+                clienteEN.Telefono = cliente.Telefono;
 
                 session.Update (clienteEN);
                 SessionCommit ();

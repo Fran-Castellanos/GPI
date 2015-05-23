@@ -101,6 +101,8 @@
 	<Compile Include="CEN\GpiER\UsuarioCEN.cs" />
 	<Compile Include="CAD\GpiER\IUsuarioCAD.cs" />
 	<Compile Include="CAD\GpiER\UsuarioCAD.cs" />
+	<Compile Include="Enumerated\GpiER\TipoDescuentoEnum.cs" />
+	<Compile Include="Enumerated\GpiER\DivisaEnum.cs" />
 	
 	
 

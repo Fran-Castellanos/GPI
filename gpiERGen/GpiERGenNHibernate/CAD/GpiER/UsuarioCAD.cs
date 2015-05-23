@@ -89,6 +89,9 @@ public void ModificaUsuario (UsuarioEN usuario)
 
                 usuarioEN.Password = usuario.Password;
 
+
+                usuarioEN.FechaRegistro = usuario.FechaRegistro;
+
                 session.Update (usuarioEN);
                 SessionCommit ();
         }

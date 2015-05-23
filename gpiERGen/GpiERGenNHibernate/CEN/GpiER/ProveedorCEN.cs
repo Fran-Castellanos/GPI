@@ -32,26 +32,38 @@ public IProveedorCAD get_IProveedorCAD ()
         return this._IProveedorCAD;
 }
 
-public string NuevoProveedor (string p_nombre, string p_direccion, string p_nif, int p_descuento, string p_diaCobro, string p_divisa, string p_datosBancarios)
+public string NuevoProveedor (string p_nif, string p_nombre, string p_pais, string p_provincia, string p_direccion, string p_email, GpiERGenNHibernate.Enumerated.GpiER.DivisaEnum p_divisa, string p_datosBancarios, double p_descuento, System.Collections.Generic.IList<Nullable<DateTime> > p_diasCobro, Nullable<DateTime> p_fechaAlta, Nullable<DateTime> p_fechaUltimaModificacion, string p_telefono)
 {
         ProveedorEN proveedorEN = null;
         string oid;
 
         //Initialized ProveedorEN
         proveedorEN = new ProveedorEN ();
+        proveedorEN.Nif = p_nif;
+
         proveedorEN.Nombre = p_nombre;
+
+        proveedorEN.Pais = p_pais;
+
+        proveedorEN.Provincia = p_provincia;
 
         proveedorEN.Direccion = p_direccion;
 
-        proveedorEN.Nif = p_nif;
-
-        proveedorEN.Descuento = p_descuento;
-
-        proveedorEN.DiaCobro = p_diaCobro;
+        proveedorEN.Email = p_email;
 
         proveedorEN.Divisa = p_divisa;
 
         proveedorEN.DatosBancarios = p_datosBancarios;
+
+        proveedorEN.Descuento = p_descuento;
+
+        proveedorEN.DiasCobro = p_diasCobro;
+
+        proveedorEN.FechaAlta = p_fechaAlta;
+
+        proveedorEN.FechaUltimaModificacion = p_fechaUltimaModificacion;
+
+        proveedorEN.Telefono = p_telefono;
 
         //Call to ProveedorCAD
 
@@ -59,7 +71,7 @@ public string NuevoProveedor (string p_nombre, string p_direccion, string p_nif,
         return oid;
 }
 
-public void ModificaProveedor (string p_Proveedor_OID, string p_nombre, string p_direccion, int p_descuento, string p_diaCobro, string p_divisa, string p_datosBancarios)
+public void ModificaProveedor (string p_Proveedor_OID, string p_nombre, string p_pais, string p_provincia, string p_direccion, string p_email, GpiERGenNHibernate.Enumerated.GpiER.DivisaEnum p_divisa, string p_datosBancarios, double p_descuento, System.Collections.Generic.IList<Nullable<DateTime> > p_diasCobro, Nullable<DateTime> p_fechaAlta, Nullable<DateTime> p_fechaUltimaModificacion, string p_telefono)
 {
         ProveedorEN proveedorEN = null;
 
@@ -67,11 +79,17 @@ public void ModificaProveedor (string p_Proveedor_OID, string p_nombre, string p
         proveedorEN = new ProveedorEN ();
         proveedorEN.Nif = p_Proveedor_OID;
         proveedorEN.Nombre = p_nombre;
+        proveedorEN.Pais = p_pais;
+        proveedorEN.Provincia = p_provincia;
         proveedorEN.Direccion = p_direccion;
-        proveedorEN.Descuento = p_descuento;
-        proveedorEN.DiaCobro = p_diaCobro;
+        proveedorEN.Email = p_email;
         proveedorEN.Divisa = p_divisa;
         proveedorEN.DatosBancarios = p_datosBancarios;
+        proveedorEN.Descuento = p_descuento;
+        proveedorEN.DiasCobro = p_diasCobro;
+        proveedorEN.FechaAlta = p_fechaAlta;
+        proveedorEN.FechaUltimaModificacion = p_fechaUltimaModificacion;
+        proveedorEN.Telefono = p_telefono;
         //Call to ProveedorCAD
 
         _IProveedorCAD.ModificaProveedor (proveedorEN);

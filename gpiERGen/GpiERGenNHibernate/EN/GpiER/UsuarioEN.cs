@@ -21,7 +21,7 @@ private string nick;
  *
  */
 
-private string password;
+private String password;
 
 /**
  *
@@ -34,6 +34,12 @@ private System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ClienteEN> 
  */
 
 private System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN> proveedor;
+
+/**
+ *
+ */
+
+private Nullable<DateTime> fechaRegistro;
 
 
 
@@ -49,7 +55,7 @@ public virtual string Nick {
 }
 
 
-public virtual string Password {
+public virtual String Password {
         get { return password; } set { password = value;  }
 }
 
@@ -64,6 +70,11 @@ public virtual System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.Prov
 }
 
 
+public virtual Nullable<DateTime> FechaRegistro {
+        get { return fechaRegistro; } set { fechaRegistro = value;  }
+}
+
+
 
 
 
@@ -75,18 +86,18 @@ public UsuarioEN()
 
 
 
-public UsuarioEN(string email, string nick, string password, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ClienteEN> cliente, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN> proveedor)
+public UsuarioEN(string email, string nick, String password, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ClienteEN> cliente, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN> proveedor, Nullable<DateTime> fechaRegistro)
 {
-        this.init (email, nick, password, cliente, proveedor);
+        this.init (email, nick, password, cliente, proveedor, fechaRegistro);
 }
 
 
 public UsuarioEN(UsuarioEN usuario)
 {
-        this.init (usuario.Email, usuario.Nick, usuario.Password, usuario.Cliente, usuario.Proveedor);
+        this.init (usuario.Email, usuario.Nick, usuario.Password, usuario.Cliente, usuario.Proveedor, usuario.FechaRegistro);
 }
 
-private void init (string email, string nick, string password, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ClienteEN> cliente, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN> proveedor)
+private void init (string email, string nick, String password, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ClienteEN> cliente, System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN> proveedor, Nullable<DateTime> fechaRegistro)
 {
         this.Email = email;
 
@@ -98,6 +109,8 @@ private void init (string email, string nick, string password, System.Collection
         this.Cliente = cliente;
 
         this.Proveedor = proveedor;
+
+        this.FechaRegistro = fechaRegistro;
 }
 
 public override bool Equals (object obj)

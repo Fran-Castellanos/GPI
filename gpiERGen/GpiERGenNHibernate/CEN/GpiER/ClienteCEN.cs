@@ -32,20 +32,22 @@ public IClienteCAD get_IClienteCAD ()
         return this._IClienteCAD;
 }
 
-public string NuevoCliente (string p_nombre, string p_nif, string p_direccion, string p_provincia, string p_email, string p_datosBancarios, string p_diasPago, string p_tipoDescuento, string p_riesgosPermitidos, string p_datosContables, string p_direccionEnvio)
+public string NuevoCliente (string p_nif, string p_nombre, string p_pais, string p_provincia, string p_direccion, string p_email, string p_datosBancarios, System.Collections.Generic.IList<Nullable<DateTime> > p_diasPago, GpiERGenNHibernate.Enumerated.GpiER.TipoDescuentoEnum p_tipoDescuento, double p_descuento, double p_riesgosPermitidos, string p_datosContables, string p_direccionEnvio, Nullable<DateTime> p_fechaAlta, Nullable<DateTime> p_fechaUltimaModificacion, string p_telefono)
 {
         ClienteEN clienteEN = null;
         string oid;
 
         //Initialized ClienteEN
         clienteEN = new ClienteEN ();
-        clienteEN.Nombre = p_nombre;
-
         clienteEN.Nif = p_nif;
 
-        clienteEN.Direccion = p_direccion;
+        clienteEN.Nombre = p_nombre;
+
+        clienteEN.Pais = p_pais;
 
         clienteEN.Provincia = p_provincia;
+
+        clienteEN.Direccion = p_direccion;
 
         clienteEN.Email = p_email;
 
@@ -55,11 +57,19 @@ public string NuevoCliente (string p_nombre, string p_nif, string p_direccion, s
 
         clienteEN.TipoDescuento = p_tipoDescuento;
 
+        clienteEN.Descuento = p_descuento;
+
         clienteEN.RiesgosPermitidos = p_riesgosPermitidos;
 
         clienteEN.DatosContables = p_datosContables;
 
         clienteEN.DireccionEnvio = p_direccionEnvio;
+
+        clienteEN.FechaAlta = p_fechaAlta;
+
+        clienteEN.FechaUltimaModificacion = p_fechaUltimaModificacion;
+
+        clienteEN.Telefono = p_telefono;
 
         //Call to ClienteCAD
 
@@ -67,7 +77,7 @@ public string NuevoCliente (string p_nombre, string p_nif, string p_direccion, s
         return oid;
 }
 
-public void ModificaCliente (string p_Cliente_OID, string p_nombre, string p_direccion, string p_provincia, string p_email, string p_datosBancarios, string p_diasPago, string p_tipoDescuento, string p_riesgosPermitidos, string p_datosContables, string p_direccionEnvio)
+public void ModificaCliente (string p_Cliente_OID, string p_nombre, string p_pais, string p_provincia, string p_direccion, string p_email, string p_datosBancarios, System.Collections.Generic.IList<Nullable<DateTime> > p_diasPago, GpiERGenNHibernate.Enumerated.GpiER.TipoDescuentoEnum p_tipoDescuento, double p_descuento, double p_riesgosPermitidos, string p_datosContables, string p_direccionEnvio, Nullable<DateTime> p_fechaAlta, Nullable<DateTime> p_fechaUltimaModificacion, string p_telefono)
 {
         ClienteEN clienteEN = null;
 
@@ -75,15 +85,20 @@ public void ModificaCliente (string p_Cliente_OID, string p_nombre, string p_dir
         clienteEN = new ClienteEN ();
         clienteEN.Nif = p_Cliente_OID;
         clienteEN.Nombre = p_nombre;
-        clienteEN.Direccion = p_direccion;
+        clienteEN.Pais = p_pais;
         clienteEN.Provincia = p_provincia;
+        clienteEN.Direccion = p_direccion;
         clienteEN.Email = p_email;
         clienteEN.DatosBancarios = p_datosBancarios;
         clienteEN.DiasPago = p_diasPago;
         clienteEN.TipoDescuento = p_tipoDescuento;
+        clienteEN.Descuento = p_descuento;
         clienteEN.RiesgosPermitidos = p_riesgosPermitidos;
         clienteEN.DatosContables = p_datosContables;
         clienteEN.DireccionEnvio = p_direccionEnvio;
+        clienteEN.FechaAlta = p_fechaAlta;
+        clienteEN.FechaUltimaModificacion = p_fechaUltimaModificacion;
+        clienteEN.Telefono = p_telefono;
         //Call to ClienteCAD
 
         _IClienteCAD.ModificaCliente (clienteEN);
