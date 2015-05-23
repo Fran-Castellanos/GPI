@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace StockManager.Models
+namespace GestionStockGPI.Models
 {
     public partial class BuscadorModels : System.Web.UI.MasterPage
     {

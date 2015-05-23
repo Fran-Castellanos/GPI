@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using GpiERGenNHibernate.EN.GpiER;
 using GpiERGenNHibernate.CEN.GpiER;
 
-namespace StockManager.Controllers
+namespace GestionStockGPI.Controllers
 {
     public class ProveedoresController : Controller
     {

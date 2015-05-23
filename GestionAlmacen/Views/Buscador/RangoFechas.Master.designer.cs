@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace StockManager.Models {
+namespace GestionStockGPI.Models {
     
     
     public partial class BuscadorModels {

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace StockManager.Views.Buscador
+namespace GestionStockGPI.Views.Buscador
 {
     public partial class RangoFechas : System.Web.UI.MasterPage
     {

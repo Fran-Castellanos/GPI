@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Web.Mvc;
 using GpiERGenNHibernate.CEN.GpiER;
 using GpiERGenNHibernate.EN.GpiER;
-using StockManager.Models;
+using GestionStockGPI.Models;
 
 
 namespace Clientes

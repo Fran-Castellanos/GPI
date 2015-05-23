@@ -7,9 +7,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
-using StockManager.Models;
+using GestionStockGPI.Models;
 
-namespace StockManager.Controllers
+namespace GestionStockGPI.Controllers
 {
 
     [HandleError]
