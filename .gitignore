@@ -1,0 +1,16 @@
+*.txt
+*.cache
+*.pdb
+*.txt
+GestionAlmacen/GestionAlmacen.suo
+*.trx
+GestionAlmacen/bin
+GestionAlmacen/obj
+gpiERGen/GpiERGenNHibernate/bin
+gpiERGen/GpiERGenNHibernate/obj
+gpiERGen/InitializeDB/obj
+gpiERGen/InitializeDB/bin
+GestionAlmacen/App_Data
+*.MDF
+*.ldf
+
