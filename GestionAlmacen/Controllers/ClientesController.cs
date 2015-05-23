@@ -41,8 +41,16 @@ namespace GestionStockGPI.Controllers
         [HttpPost]
         public void NewCliente(ClienteEN cliente)
         {
-            clienteCEN.NuevoCliente(cliente.Nif, cliente.Nombre, cliente.Pais, cliente.Provincia, cliente.Direccion, cliente.Email, cliente.DatosBancarios, cliente.DiasPago, cliente.TipoDescuento, cliente.Descuento, cliente.RiesgosPermitidos, cliente.DatosContables, cliente.DireccionEnvio, cliente.FechaAlta, cliente.FechaUltimaModificacion, cliente.Telefono);
-            Response.Redirect("~/Clientes/ListaClientes");
+            if (cliente == null || cliente.Nif == null)
+            {
+                Response.Redirect("~/Clientes/NewCliente");
+                return;
+            }
+            else
+            {
+                clienteCEN.NuevoCliente(cliente.Nif, cliente.Nombre, cliente.Pais, cliente.Provincia, cliente.Direccion, cliente.Email, cliente.DatosBancarios, cliente.DiasPago, cliente.TipoDescuento, cliente.Descuento, cliente.RiesgosPermitidos, cliente.DatosContables, cliente.DireccionEnvio, cliente.FechaAlta, cliente.FechaUltimaModificacion, cliente.Telefono);
+                Response.Redirect("~/Clientes/ListaClientes");
+            }
         }
 
 

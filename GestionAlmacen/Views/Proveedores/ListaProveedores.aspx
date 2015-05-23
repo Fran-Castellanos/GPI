@@ -5,12 +5,16 @@
 </asp:Content>
 
 <asp:Content ID="Title" runat="server" ContentPlaceHolderID="SectionTitle">
-Lista de proveedores
+    Lista de proveedores
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    
+
     <form id="Form1" runat="server">
+        <asp:Button ID="btnConfirm" runat="server" Text="Registrar nuevo proveedor"
+        PostBackUrl="~/Proveedores/NewProveedor" />
+        <br />
+        <br />
         <asp:GridView ID="gridClientes" runat="server" CellPadding="4" CssClass="table table-striped"
             onselectedindexchanged="gridClientes_SelectedIndexChanged">
             <Columns>

@@ -11,6 +11,10 @@ Lista de clientes
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 
     <form runat="server">
+        <asp:Button ID="btnConfirm" runat="server" Text="Registrar nuevo cliente"
+        PostBackUrl="~/Clientes/NewCliente" />
+        <br />
+        <br />
         <asp:GridView ID="gridClientes" runat="server" CellPadding="4" CssClass="table table-striped"
             onselectedindexchanged="gridClientes_SelectedIndexChanged">
             <Columns>

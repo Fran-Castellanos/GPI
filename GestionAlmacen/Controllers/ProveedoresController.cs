@@ -33,9 +33,18 @@ namespace GestionStockGPI.Controllers
         [HttpPost]
         public void NewProveedor(ProveedorEN proveedor)
         {
-            proCEN.NuevoProveedor(proveedor.Nif, proveedor.Nombre, proveedor.Pais, proveedor.Provincia, proveedor.Direccion, proveedor.Email, proveedor.Divisa, proveedor.DatosBancarios, proveedor.Descuento, proveedor.DiasCobro, proveedor.FechaAlta, proveedor.FechaUltimaModificacion, proveedor.Telefono);
-            
-            Response.Redirect("~/Proveedores/ListaProveedores");
+            if (proveedor == null || proveedor.Nif == null)
+            {
+                Response.Redirect("~/Proveedores/NewProveedor");
+                return;
+            }
+            else
+            {
+
+                proCEN.NuevoProveedor(proveedor.Nif, proveedor.Nombre, proveedor.Pais, proveedor.Provincia, proveedor.Direccion, proveedor.Email, proveedor.Divisa, proveedor.DatosBancarios, proveedor.Descuento, proveedor.DiasCobro, proveedor.FechaAlta, proveedor.FechaUltimaModificacion, proveedor.Telefono);
+
+                Response.Redirect("~/Proveedores/ListaProveedores");
+            }
         }
 
 
