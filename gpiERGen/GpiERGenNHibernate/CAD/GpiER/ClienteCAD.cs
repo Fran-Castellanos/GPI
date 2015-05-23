@@ -225,5 +225,36 @@ public System.Collections.Generic.IList<ClienteEN> DameTodosLosClientes (int fir
 
         return result;
 }
+
+public System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ClienteEN> ReadFilter (string p_filter)
+{
+        System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ClienteEN> result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM ClienteEN self where FROM ClienteEN c where c.Nif like CONCAT('%',:p_filter,'%') OR c.Nombre like CONCAT('%',:p_filter,'%') OR c.Email like CONCAT('%',:p_filter,'%') OR c.Direccion like CONCAT('%',:p_filter,'%') OR c.DireccionEnvio like CONCAT('%',:p_filter,'%')  OR c.Pais like CONCAT('%',:p_filter,'%') OR c.Provincia like CONCAT('%',:p_filter,'%') OR c.Telefono like CONCAT('%',:p_filter,'%')";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("ClienteENreadFilterHQL");
+                query.SetParameter ("p_filter", p_filter);
+
+                result = query.List<GpiERGenNHibernate.EN.GpiER.ClienteEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is GpiERGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new GpiERGenNHibernate.Exceptions.DataLayerException ("Error in ClienteCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
 }
 }

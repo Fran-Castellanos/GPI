@@ -20,5 +20,8 @@ ProveedorEN DameProveedorPorOID (string nif);
 
 
 System.Collections.Generic.IList<ProveedorEN> DameTodosLosProveedores (int first, int size);
+
+
+System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN> ReadFilter (string p_filter);
 }
 }

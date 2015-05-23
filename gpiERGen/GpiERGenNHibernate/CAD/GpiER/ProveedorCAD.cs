@@ -216,5 +216,36 @@ public System.Collections.Generic.IList<ProveedorEN> DameTodosLosProveedores (in
 
         return result;
 }
+
+public System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN> ReadFilter (string p_filter)
+{
+        System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN> result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM ProveedorEN self where FROM ProveedorEN c where c.Nif like CONCAT('%',:p_filter,'%') OR c.Nombre like CONCAT('%',:p_filter,'%') OR c.Email like CONCAT('%',:p_filter,'%') OR c.Direccion like CONCAT('%',:p_filter,'%') OR c.Divisa like CONCAT('%',:p_filter,'%') OR c.Pais like CONCAT('%',:p_filter,'%') OR c.Provincia like CONCAT('%',:p_filter,'%') OR c.Telefono like CONCAT('%',:p_filter,'%')";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("ProveedorENreadFilterHQL");
+                query.SetParameter ("p_filter", p_filter);
+
+                result = query.List<GpiERGenNHibernate.EN.GpiER.ProveedorEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is GpiERGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new GpiERGenNHibernate.Exceptions.DataLayerException ("Error in ProveedorCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
 }
 }

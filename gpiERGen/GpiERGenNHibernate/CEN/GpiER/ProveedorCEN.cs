@@ -115,5 +115,9 @@ public System.Collections.Generic.IList<ProveedorEN> DameTodosLosProveedores (in
         list = _IProveedorCAD.DameTodosLosProveedores (first, size);
         return list;
 }
+public System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN> ReadFilter (string p_filter)
+{
+        return _IProveedorCAD.ReadFilter (p_filter);
+}
 }
 }

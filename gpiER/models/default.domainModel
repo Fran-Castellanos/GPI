@@ -45,6 +45,9 @@
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJwHtADSEeWYqIsQRV9k2g" name="p_Cliente_OID" type="OID" typeObject="_oW5VcPiMEeS_QuN4fkSZRg"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_9XI4QPiQEeS_QuN4fkSZRg" name="dameTodosLosClientes" operationType="ReadAll" type="Object" collectionType="List" typeObject="_oW5VcPiMEeS_QuN4fkSZRg"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_T63C4AFPEeWmkbe3uTLQCA" name="readFilter" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_oW5VcPiMEeS_QuN4fkSZRg" filter="FROM ClienteEN c where c.Nif like CONCAT('%',:p_filter,'%') OR c.Nombre like CONCAT('%',:p_filter,'%') OR c.Email like CONCAT('%',:p_filter,'%') OR c.Direccion like CONCAT('%',:p_filter,'%') OR c.DireccionEnvio like CONCAT('%',:p_filter,'%')  OR c.Pais like CONCAT('%',:p_filter,'%') OR c.Provincia like CONCAT('%',:p_filter,'%') OR c.Telefono like CONCAT('%',:p_filter,'%')" automaticSynchronize="false">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_a6YZwAFPEeWmkbe3uTLQCA" name="p_filter"/>
+      </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="__fC8wPiMEeS_QuN4fkSZRg" alias="nombre" name="nif" isOID="true" unique="true"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_DNBqYPiNEeS_QuN4fkSZRg" alias="nif" name="nombre"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_T8YjoPiNEeS_QuN4fkSZRg" alias="pais" name="pais"/>
@@ -101,6 +104,9 @@
         <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLM9owDSEeWYqIsQRV9k2g" name="p_Proveedor_OID" type="OID" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_hWZ78PiREeS_QuN4fkSZRg" name="dameTodosLosProveedores" operationType="ReadAll" type="Object" collectionType="List" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg"/>
+      <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_nzpnsAFOEeWmkbe3uTLQCA" name="readFilter" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg" filter="FROM ProveedorEN c where c.Nif like CONCAT('%',:p_filter,'%') OR c.Nombre like CONCAT('%',:p_filter,'%') OR c.Email like CONCAT('%',:p_filter,'%') OR c.Direccion like CONCAT('%',:p_filter,'%') OR c.Divisa like CONCAT('%',:p_filter,'%') OR c.Pais like CONCAT('%',:p_filter,'%') OR c.Provincia like CONCAT('%',:p_filter,'%') OR c.Telefono like CONCAT('%',:p_filter,'%')" automaticSynchronize="false">
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_WIiUAAFSEeWmkbe3uTLQCA" name="p_filter"/>
+      </operations>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_UwlLQPiOEeS_QuN4fkSZRg" alias="nif" name="nif" isOID="true" unique="true"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_WNIBwPiOEeS_QuN4fkSZRg" alias="nombre" name="nombre"/>
       <attributes xmi:type="es.ua.dlsi.ooh:Attribute" xmi:id="_XmY6wPiOEeS_QuN4fkSZRg" alias="pais" name="pais"/>
@@ -288,6 +294,13 @@
           <styles xmi:type="notation:FillStyle" xmi:id="_9XSpQPiQEeS_QuN4fkSZRg"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9XSpQfiQEeS_QuN4fkSZRg"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_T64RAAFPEeWmkbe3uTLQCA" type="3004" element="_T63C4AFPEeWmkbe3uTLQCA">
+          <children xmi:type="notation:DecorationNode" xmi:id="_T64RBQFPEeWmkbe3uTLQCA" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_T64RAQFPEeWmkbe3uTLQCA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_T64RAgFPEeWmkbe3uTLQCA" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_T64RAwFPEeWmkbe3uTLQCA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T64RBAFPEeWmkbe3uTLQCA"/>
+        </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_oXo8WviMEeS_QuN4fkSZRg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_oXo8W_iMEeS_QuN4fkSZRg"/>
       </children>
@@ -393,6 +406,13 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_hWZ79PiREeS_QuN4fkSZRg" fontName="Segoe UI"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_hWZ79fiREeS_QuN4fkSZRg"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hWZ79viREeS_QuN4fkSZRg"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_n1hP8AFOEeWmkbe3uTLQCA" type="3004" element="_nzpnsAFOEeWmkbe3uTLQCA">
+          <children xmi:type="notation:DecorationNode" xmi:id="_n1hP9QFOEeWmkbe3uTLQCA" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_n1hP8QFOEeWmkbe3uTLQCA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_n1hP8gFOEeWmkbe3uTLQCA" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_n1hP8wFOEeWmkbe3uTLQCA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n1hP9AFOEeWmkbe3uTLQCA"/>
         </children>
         <styles xmi:type="notation:SortingStyle" xmi:id="_qKFxZfiMEeS_QuN4fkSZRg"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_qKFxZviMEeS_QuN4fkSZRg"/>

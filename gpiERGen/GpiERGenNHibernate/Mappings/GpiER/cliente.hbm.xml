@@ -99,5 +99,6 @@
 		  </class>
 		  
 		  <query name="ClienteENReadAllHQL">from ClienteEN</query>
+		  <query name="ClienteENreadFilterHQL"><![CDATA[FROM ClienteEN c where c.Nif like CONCAT('%',:p_filter,'%') OR c.Nombre like CONCAT('%',:p_filter,'%') OR c.Email like CONCAT('%',:p_filter,'%') OR c.Direccion like CONCAT('%',:p_filter,'%') OR c.DireccionEnvio like CONCAT('%',:p_filter,'%')  OR c.Pais like CONCAT('%',:p_filter,'%') OR c.Provincia like CONCAT('%',:p_filter,'%') OR c.Telefono like CONCAT('%',:p_filter,'%')]]></query>
 		</hibernate-mapping>
 	

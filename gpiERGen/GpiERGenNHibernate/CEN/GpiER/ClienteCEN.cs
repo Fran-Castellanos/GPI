@@ -124,5 +124,9 @@ public System.Collections.Generic.IList<ClienteEN> DameTodosLosClientes (int fir
         list = _IClienteCAD.DameTodosLosClientes (first, size);
         return list;
 }
+public System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ClienteEN> ReadFilter (string p_filter)
+{
+        return _IClienteCAD.ReadFilter (p_filter);
+}
 }
 }

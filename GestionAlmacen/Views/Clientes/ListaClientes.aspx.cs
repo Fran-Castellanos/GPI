@@ -40,9 +40,9 @@ namespace Clientes
         {
             try
             {
-                //if (buscador.comprobarTextoBusqueda(Request.QueryString["TextoBusqueda"]))
-                //    listaClientes = cliente.ReadFilter(buscador.TextoBusqueda);
-                //else
+                if (buscador.comprobarTextoBusqueda(Request.QueryString["TextoBusqueda"]))
+                    listaClientes = cliente.ReadFilter(buscador.TextoBusqueda);
+                else
                     listaClientes = cliente.DameTodosLosClientes(0, 100);
             }
             catch (Exception)

@@ -32,9 +32,9 @@ namespace Proveedores
         {
             try
             {
-                //if (buscador.comprobarTextoBusqueda(Request.QueryString["TextoBusqueda"]))
-                    //listaProveedores = proveedor.ReadFilter(buscador.TextoBusqueda);
-                //else
+                if (buscador.comprobarTextoBusqueda(Request.QueryString["TextoBusqueda"]))
+                    listaProveedores = proveedor.ReadFilter(buscador.TextoBusqueda);
+                else
                     listaProveedores = proveedor.DameTodosLosProveedores(0, 100);
             }
             catch (Exception)
