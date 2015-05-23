@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<form role="form" runat="server" method="post">
+<form runat="server" method="post">
     <div class="jumbotron">
            <h2>Enviar correo</h2>
        </div>

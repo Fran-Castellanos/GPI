@@ -71,8 +71,8 @@ namespace GestionStockGPI.Controllers
                     Response.Write("<script>alert ('" + m + "');location.href='" + PathPagina + "'</script>");
                     //Response.Write("<script>var x = window.alert('" + m + "') if(x){Response.Redirect(\"~/Cor1eo/EnviarCorreo\")}</script>");
                 }
-
-                Response.Redirect("~/Home/Index");
+                PathPagina = "../";
+                Response.Write("<script>alert ('" + "El mensaje se ha enviado satisfactoriamente" + "');location.href='" + PathPagina + "'</script>");
             }
             catch (Exception e)
             {
