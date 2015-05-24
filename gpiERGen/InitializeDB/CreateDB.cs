@@ -123,17 +123,17 @@ public static void InitializeData ()
                 cli1.Email = "cliente1@cliente.com";
                 cli1.Nombre = "Cliente1";
                 cli1.Telefono = "654321789";
-                cli1.Pais = "España";
+                cli1.Pais = "EspaÃ±a";
                 cli1.Provincia = "Albacete";
                 cli1.RiesgosPermitidos = 500;
                 cli1.TipoDescuento = TipoDescuentoEnum.TIPO_1;
                 cli1.Descuento = 1;
-                IList<DateTime?  > dias = new List<DateTime?  >();
+                IList<DateTime?    > dias = new List<DateTime?    >();
                 dias.Add (new DateTime (2015, 2, 3));
                 dias.Add (new DateTime (2015, 3, 5));
                 cli1.DiasPago = dias;
-                cli1.Direccion = "Calle Mayor nº 22, Albacete";
-                cli1.DireccionEnvio = "Calle Mayor nº 22, Albacete";
+                cli1.Direccion = "Calle Mayor nÂº 22, Albacete";
+                cli1.DireccionEnvio = "Calle Mayor nÂº 22, Albacete";
                 cli1.FechaAlta = new DateTime (2015, 04, 09);
                 cli1.FechaUltimaModificacion = new DateTime (2015, 04, 09);
                 cli1.DatosContables = "";
@@ -149,18 +149,18 @@ public static void InitializeData ()
                 cli2.Email = "cliente2@cliente.com";
                 cli2.Nombre = "Cliente2";
                 cli2.Telefono = "655112233";
-                cli2.Pais = "España";
+                cli2.Pais = "EspaÃ±a";
                 cli2.Provincia = "Barcelona";
                 cli2.RiesgosPermitidos = 1720;
                 cli2.TipoDescuento = TipoDescuentoEnum.TIPO_2;
                 cli2.Descuento = 2;
                 dias.Clear ();
-                dias = new List<DateTime?  >();
+                dias = new List<DateTime?    >();
                 dias.Add (new DateTime (2014, 8, 10));
                 dias.Add (new DateTime (2015, 1, 11));
                 cli2.DiasPago = dias;
-                cli2.Direccion = "Calle Tomate nº 10, Barcelona";
-                cli2.DireccionEnvio = "Calle de GPI nº 4, Barcelona";
+                cli2.Direccion = "Calle Tomate nÂº 10, Barcelona";
+                cli2.DireccionEnvio = "Calle de GPI nÂº 4, Barcelona";
                 cli2.FechaAlta = DateTime.Now;
                 cli2.FechaUltimaModificacion = DateTime.Now;
                 cli2.DatosContables = "";
@@ -182,7 +182,7 @@ public static void InitializeData ()
                 pro1.Pais = "Francia";
                 pro1.Provincia = "Le Mans";
                 pro1.Divisa = DivisaEnum.EURO;
-                pro1.Direccion = "Calle Francia nº 45";
+                pro1.Direccion = "Calle Francia nÂº 45";
                 pro1.Descuento = 1;
                 pro1.DatosBancarios = "000000000000";
                 dias.Clear ();
@@ -194,7 +194,7 @@ public static void InitializeData ()
                 pro1.FechaAlta = new DateTime (2015, 04, 09);
                 pro1.FechaUltimaModificacion = pro1.FechaAlta;
 
-                pro1.Direccion = "Dirección de la sede del proveedor1";
+                pro1.Direccion = "DirecciÃ³n de la sede del proveedor1";
 
 
                 ProveedorCEN proCen = new ProveedorCEN ();
@@ -210,10 +210,10 @@ public static void InitializeData ()
                 pro2.Email = "proveedor2@proveedor.com";
                 pro2.Nombre = "Proveedor2";
                 pro2.Telefono = "658787811";
-                pro2.Pais = "España";
+                pro2.Pais = "EspaÃ±a";
                 pro2.Provincia = "Alicante";
                 pro2.Divisa = DivisaEnum.EURO;
-                pro2.Direccion = "Avd Madrid nº 1, Benidorm";
+                pro2.Direccion = "Avd Madrid nÂº 1, Benidorm";
                 pro2.Descuento = 5;
                 pro2.DatosBancarios = "111111111111";
                 dias.Clear ();
@@ -225,7 +225,7 @@ public static void InitializeData ()
                 pro2.FechaAlta = new DateTime (2015, 04, 09);
                 pro2.FechaUltimaModificacion = new DateTime (2015, 5, 10);
 
-                pro2.Direccion = "Dirección de la sede del proveedor2";
+                pro2.Direccion = "DirecciÃ³n de la sede del proveedor2";
 
 
                 proCen.NuevoProveedor (pro2.Nif, pro2.Nombre, pro2.Pais, pro2.Provincia, pro2.Direccion, pro2.Email, pro2.Divisa, pro2.DatosBancarios, pro2.Descuento, pro2.DiasCobro, pro2.FechaAlta, pro2.FechaUltimaModificacion, pro2.Telefono);

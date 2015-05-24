@@ -48,6 +48,12 @@ namespace GestionStockGPI.Controllers
             }
             else
             {
+                DateTime fechaRegistro = DateTime.Now;
+                cliente.FechaAlta = fechaRegistro;
+                cliente.FechaUltimaModificacion = fechaRegistro;
+                cliente.DatosContables = "0";
+                cliente.TipoDescuento = GpiERGenNHibernate.Enumerated.GpiER.TipoDescuentoEnum.OTRO;
+
                 clienteCEN.NuevoCliente(cliente.Nif, cliente.Nombre, cliente.Pais, cliente.Provincia, cliente.Direccion, cliente.Email, cliente.DatosBancarios, cliente.DiasPago, cliente.TipoDescuento, cliente.Descuento, cliente.RiesgosPermitidos, cliente.DatosContables, cliente.DireccionEnvio, cliente.FechaAlta, cliente.FechaUltimaModificacion, cliente.Telefono);
                 Response.Redirect("~/Clientes/ListaClientes");
             }
@@ -79,10 +85,14 @@ namespace GestionStockGPI.Controllers
         public ActionResult EditCliente(ClienteEN a)
         {
             if (a != null)
+            {
+                DateTime fechaRegistro = DateTime.Now;
+                a.FechaUltimaModificacion = fechaRegistro;
+
                 clienteCEN.ModificaCliente(a.Nif, a.Nombre, a.Pais, a.Provincia, a.Direccion, a.Email, a.DatosBancarios, a.DiasPago, a.TipoDescuento
                     , a.Descuento, a.RiesgosPermitidos, a.DatosContables, a.DireccionEnvio, a.FechaAlta, a.FechaUltimaModificacion, a.Telefono);
-                
-            
+
+            }
             return RedirectToAction("ListaClientes");
         }
 

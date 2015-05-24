@@ -286,3 +286,119 @@ enc:utf-8
 ../gpiERGen\gpiERGenNHibernate\AppLib\nunit.core.dll
 ../gpiERGen\gpiERGenNHibernate\AppLib\nunit.framework.dll
 2063 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 1587ms!
+0    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - EMF Modeling Workflow Engine 1.2.1, Build v201306110341
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - (c) 2005-2009 openarchitectureware.org and contributors
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - running workflow: C:/Users/Paco/Documents/GitHub/GPI/gpiER/templates/workflow/generator.mwe
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - 
+645  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Registering platform uri 'C:\Users\Paco\Documents\GitHub\GPI'
+738  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'es.ua.dlsi.ooh.conceptualView.ConceptualViewPackage'
+789  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'org.eclipse.gmf.runtime.notation.NotationPackage'
+1000 [main] INFO  e.core.container.CompositeComponent  - Workflow: executing workflow workflow::nhibernate::generator.mwe in C:/Users/Paco/Documents/GitHub/GPI/gpiER/templates/workflow/generator.mwe:10
+1001 [main] INFO  e.core.container.CompositeComponent  - XmiReader: file 'models/default.domainModel' => slot 'es_ua_dlsi_ooh_conceptual_model'
+1162 [main] INFO  e.core.container.CompositeComponent  - CheckComponent: slot es_ua_dlsi_ooh_conceptual_model check file(s): metamodel::Checks 
+2440 [main] INFO  e.core.container.CompositeComponent  - Generator(nhibernate.generator): generating 'workflow::nhibernate::workflow::main FOR true' => [CONFIGURATION:../gpiERGen(overwrite=false,append=false,fileEncoding=utf-8), ../gpiERGen]
+configuroConf:C:\Users\Paco\AppData\Local\Temp\OOH4RIA6722201616088126496.cfg
+enc:utf-8
+3655 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan started ...
+4106 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan finished in 0.451s
+4106 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Files scanned: 50
+4106 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Regions found: 3
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+4851 [main] INFO         org.eclipse.xpand2.Generator  - Written 7 files to outlet [default](../gpiERGen)
+4851 [main] INFO         org.eclipse.xpand2.Generator  - Skipped writing of 30 files to outlet [default](../gpiERGen)
+4851 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CreateSolution
+4857 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.UpdateSolution
+4865 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CopyDLLs
+../gpiERGen\gpiERGenNHibernate\AppLib\Antlr3.Runtime.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\Castle.DynamicProxy2.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\Iesi.Collections.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\LinFu.DynamicProxy.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\log4net.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\NHibernate.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\nunit.core.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\nunit.framework.dll
+4869 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 3884ms!
+0    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+1    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - EMF Modeling Workflow Engine 1.2.1, Build v201306110341
+1    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - (c) 2005-2009 openarchitectureware.org and contributors
+1    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+1    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - running workflow: C:/Users/Paco/Documents/GitHub/GPI/gpiER/templates/workflow/generator.mwe
+1    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - 
+259  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Registering platform uri 'C:\Users\Paco\Documents\GitHub\GPI'
+347  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'es.ua.dlsi.ooh.conceptualView.ConceptualViewPackage'
+394  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'org.eclipse.gmf.runtime.notation.NotationPackage'
+490  [main] INFO  e.core.container.CompositeComponent  - Workflow: executing workflow workflow::nhibernate::generator.mwe in C:/Users/Paco/Documents/GitHub/GPI/gpiER/templates/workflow/generator.mwe:10
+490  [main] INFO  e.core.container.CompositeComponent  - XmiReader: file 'models/default.domainModel' => slot 'es_ua_dlsi_ooh_conceptual_model'
+602  [main] INFO  e.core.container.CompositeComponent  - CheckComponent: slot es_ua_dlsi_ooh_conceptual_model check file(s): metamodel::Checks 
+871  [main] INFO  e.core.container.CompositeComponent  - Generator(nhibernate.generator): generating 'workflow::nhibernate::workflow::main FOR true' => [CONFIGURATION:../gpiERGen(overwrite=false,append=false,fileEncoding=utf-8), ../gpiERGen]
+configuroConf:C:\Users\Paco\AppData\Local\Temp\OOH4RIA1594136753733723658.cfg
+enc:utf-8
+1573 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan started ...
+1609 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan finished in 0.036s
+1609 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Files scanned: 50
+1609 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Regions found: 3
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+2270 [main] INFO         org.eclipse.xpand2.Generator  - Written 7 files to outlet [default](../gpiERGen)
+2270 [main] INFO         org.eclipse.xpand2.Generator  - Skipped writing of 30 files to outlet [default](../gpiERGen)
+2270 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CreateSolution
+2276 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.UpdateSolution
+2284 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CopyDLLs
+../gpiERGen\gpiERGenNHibernate\AppLib\Antlr3.Runtime.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\Castle.DynamicProxy2.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\Iesi.Collections.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\LinFu.DynamicProxy.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\log4net.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\NHibernate.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\nunit.core.dll
+../gpiERGen\gpiERGenNHibernate\AppLib\nunit.framework.dll
+2288 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 1798ms!

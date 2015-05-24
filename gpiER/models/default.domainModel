@@ -3,46 +3,46 @@
   <es.ua.dlsi.ooh:ConceptualModel xmi:id="_ixGxoPiMEeS_QuN4fkSZRg" name="gpiER">
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_oW5VcPiMEeS_QuN4fkSZRg" name="Cliente" alias="Cliente" asociationTarget="_R78D8PiPEeS_QuN4fkSZRg">
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_t7SqwPiPEeS_QuN4fkSZRg" name="nuevoCliente" operationType="New" type="Object" typeObject="_oW5VcPiMEeS_QuN4fkSZRg">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJtrcADSEeWYqIsQRV9k2g" name="p_nif"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuSgADSEeWYqIsQRV9k2g" name="p_nombre"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuSgQDSEeWYqIsQRV9k2g" name="p_pais"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuSggDSEeWYqIsQRV9k2g" name="p_provincia"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuSgwDSEeWYqIsQRV9k2g" name="p_direccion"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuShADSEeWYqIsQRV9k2g" name="p_email"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuShQDSEeWYqIsQRV9k2g" name="p_datosBancarios"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuShgDSEeWYqIsQRV9k2g" name="p_diasPago" type="Date" collectionType="List"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuShwDSEeWYqIsQRV9k2g" name="p_tipoDescuento" type="Enum" typeEnum="_5loEsADDEeWYqIsQRV9k2g"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuSiADSEeWYqIsQRV9k2g" name="p_descuento" type="Double"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuSiQDSEeWYqIsQRV9k2g" name="p_riesgosPermitidos" type="Double"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuSigDSEeWYqIsQRV9k2g" name="p_datosContables"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJuSiwDSEeWYqIsQRV9k2g" name="p_direccionEnvio"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJu5kADSEeWYqIsQRV9k2g" name="p_fechaAlta" type="Date"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJu5kQDSEeWYqIsQRV9k2g" name="p_fechaUltimaModificacion" type="Date"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJu5kgDSEeWYqIsQRV9k2g" name="p_telefono"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC85EAJJEeWU-OVmPRtMpw" name="p_nif"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC85EQJJEeWU-OVmPRtMpw" name="p_nombre"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC85EgJJEeWU-OVmPRtMpw" name="p_pais"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gIAJJEeWU-OVmPRtMpw" name="p_provincia"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gIQJJEeWU-OVmPRtMpw" name="p_direccion"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gIgJJEeWU-OVmPRtMpw" name="p_email"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gIwJJEeWU-OVmPRtMpw" name="p_datosBancarios"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gJAJJEeWU-OVmPRtMpw" name="p_diasPago" type="Date" collectionType="List"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gJQJJEeWU-OVmPRtMpw" name="p_tipoDescuento" type="Enum" typeEnum="_5loEsADDEeWYqIsQRV9k2g"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gJgJJEeWU-OVmPRtMpw" name="p_descuento" type="Double"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gJwJJEeWU-OVmPRtMpw" name="p_riesgosPermitidos" type="Double"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gKAJJEeWU-OVmPRtMpw" name="p_datosContables"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gKQJJEeWU-OVmPRtMpw" name="p_direccionEnvio"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gKgJJEeWU-OVmPRtMpw" name="p_fechaAlta" type="Date"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gKwJJEeWU-OVmPRtMpw" name="p_fechaUltimaModificacion" type="Date"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC9gLAJJEeWU-OVmPRtMpw" name="p_telefono"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_zh01cPiPEeS_QuN4fkSZRg" name="modificaCliente" operationType="Modifier" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgoADSEeWYqIsQRV9k2g" name="p_Cliente_OID" type="OID" typeObject="_oW5VcPiMEeS_QuN4fkSZRg"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgoQDSEeWYqIsQRV9k2g" name="p_nombre"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgogDSEeWYqIsQRV9k2g" name="p_pais"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgowDSEeWYqIsQRV9k2g" name="p_provincia"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgpADSEeWYqIsQRV9k2g" name="p_direccion"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgpQDSEeWYqIsQRV9k2g" name="p_email"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgpgDSEeWYqIsQRV9k2g" name="p_datosBancarios"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgpwDSEeWYqIsQRV9k2g" name="p_diasPago" type="Date" collectionType="List"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgqADSEeWYqIsQRV9k2g" name="p_tipoDescuento" type="Enum" typeEnum="_5loEsADDEeWYqIsQRV9k2g"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgqQDSEeWYqIsQRV9k2g" name="p_descuento" type="Double"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgqgDSEeWYqIsQRV9k2g" name="p_riesgosPermitidos" type="Double"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgqwDSEeWYqIsQRV9k2g" name="p_datosContables"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJvgrADSEeWYqIsQRV9k2g" name="p_direccionEnvio"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJwHsADSEeWYqIsQRV9k2g" name="p_fechaAlta" type="Date"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJwHsQDSEeWYqIsQRV9k2g" name="p_fechaUltimaModificacion" type="Date"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJwHsgDSEeWYqIsQRV9k2g" name="p_telefono"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-HMAJJEeWU-OVmPRtMpw" name="p_Cliente_OID" type="OID" typeObject="_oW5VcPiMEeS_QuN4fkSZRg"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-HMQJJEeWU-OVmPRtMpw" name="p_nombre"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-HMgJJEeWU-OVmPRtMpw" name="p_pais"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-HMwJJEeWU-OVmPRtMpw" name="p_provincia"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-HNAJJEeWU-OVmPRtMpw" name="p_direccion"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-HNQJJEeWU-OVmPRtMpw" name="p_email"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-HNgJJEeWU-OVmPRtMpw" name="p_datosBancarios"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uQAJJEeWU-OVmPRtMpw" name="p_diasPago" type="Date" collectionType="List"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uQQJJEeWU-OVmPRtMpw" name="p_tipoDescuento" type="Enum" typeEnum="_5loEsADDEeWYqIsQRV9k2g"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uQgJJEeWU-OVmPRtMpw" name="p_descuento" type="Double"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uQwJJEeWU-OVmPRtMpw" name="p_riesgosPermitidos" type="Double"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uRAJJEeWU-OVmPRtMpw" name="p_datosContables"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uRQJJEeWU-OVmPRtMpw" name="p_direccionEnvio"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uRgJJEeWU-OVmPRtMpw" name="p_fechaAlta" type="Date"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uRwJJEeWU-OVmPRtMpw" name="p_fechaUltimaModificacion" type="Date"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uSAJJEeWU-OVmPRtMpw" name="p_telefono"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_78PdAPiPEeS_QuN4fkSZRg" name="borraCliente" operationType="Destroy" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJwHswDSEeWYqIsQRV9k2g" name="p_Cliente_OID" type="OID" typeObject="_oW5VcPiMEeS_QuN4fkSZRg"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uSQJJEeWU-OVmPRtMpw" name="p_Cliente_OID" type="OID" typeObject="_oW5VcPiMEeS_QuN4fkSZRg"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_0FvlYPiQEeS_QuN4fkSZRg" name="dameClientePorOID" operationType="ReadOID" type="Object" typeObject="_oW5VcPiMEeS_QuN4fkSZRg">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_OJwHtADSEeWYqIsQRV9k2g" name="p_Cliente_OID" type="OID" typeObject="_oW5VcPiMEeS_QuN4fkSZRg"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_tC-uSgJJEeWU-OVmPRtMpw" name="p_Cliente_OID" type="OID" typeObject="_oW5VcPiMEeS_QuN4fkSZRg"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_9XI4QPiQEeS_QuN4fkSZRg" name="dameTodosLosClientes" operationType="ReadAll" type="Object" collectionType="List" typeObject="_oW5VcPiMEeS_QuN4fkSZRg"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_T63C4AFPEeWmkbe3uTLQCA" name="readFilter" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_oW5VcPiMEeS_QuN4fkSZRg" filter="FROM ClienteEN c where c.Nif like CONCAT('%',:p_filter,'%') OR c.Nombre like CONCAT('%',:p_filter,'%') OR c.Email like CONCAT('%',:p_filter,'%') OR c.Direccion like CONCAT('%',:p_filter,'%') OR c.DireccionEnvio like CONCAT('%',:p_filter,'%')  OR c.Pais like CONCAT('%',:p_filter,'%') OR c.Provincia like CONCAT('%',:p_filter,'%') OR c.Telefono like CONCAT('%',:p_filter,'%')" automaticSynchronize="false">
@@ -68,40 +68,40 @@
     </elements>
     <elements xmi:type="es.ua.dlsi.ooh:Class" xmi:id="_qJ8AYPiMEeS_QuN4fkSZRg" name="Proveedor" alias="Proveedor" asociationTarget="_bLkcQPiPEeS_QuN4fkSZRg">
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_S3a_UPiQEeS_QuN4fkSZRg" name="nuevoProveedor" operationType="New" type="Object" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLIcADSEeWYqIsQRV9k2g" name="p_nif"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLIcQDSEeWYqIsQRV9k2g" name="p_nombre"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLIcgDSEeWYqIsQRV9k2g" name="p_pais"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLvgADSEeWYqIsQRV9k2g" name="p_provincia"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLvgQDSEeWYqIsQRV9k2g" name="p_direccion"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLvggDSEeWYqIsQRV9k2g" name="p_email"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLvgwDSEeWYqIsQRV9k2g" name="p_divisa" type="Enum" typeEnum="_6Aj68ADIEeWYqIsQRV9k2g"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLvhADSEeWYqIsQRV9k2g" name="p_datosBancarios"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLvhQDSEeWYqIsQRV9k2g" name="p_descuento" type="Double"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLvhgDSEeWYqIsQRV9k2g" name="p_diasCobro" type="Date" collectionType="List"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLvhwDSEeWYqIsQRV9k2g" name="p_fechaAlta" type="Date"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLviADSEeWYqIsQRV9k2g" name="p_fechaUltimaModificacion" type="Date"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLLviQDSEeWYqIsQRV9k2g" name="p_telefono"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw3mIAJJEeWU-OVmPRtMpw" name="p_nif"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NMAJJEeWU-OVmPRtMpw" name="p_nombre"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NMQJJEeWU-OVmPRtMpw" name="p_pais"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NMgJJEeWU-OVmPRtMpw" name="p_provincia"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NMwJJEeWU-OVmPRtMpw" name="p_direccion"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NNAJJEeWU-OVmPRtMpw" name="p_email"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NNQJJEeWU-OVmPRtMpw" name="p_divisa" type="Enum" typeEnum="_6Aj68ADIEeWYqIsQRV9k2g"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NNgJJEeWU-OVmPRtMpw" name="p_datosBancarios"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NNwJJEeWU-OVmPRtMpw" name="p_descuento" type="Double"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NOAJJEeWU-OVmPRtMpw" name="p_diasCobro" type="Date" collectionType="List"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NOQJJEeWU-OVmPRtMpw" name="p_fechaAlta" type="Date"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NOgJJEeWU-OVmPRtMpw" name="p_fechaUltimaModificacion" type="Date"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw4NOwJJEeWU-OVmPRtMpw" name="p_telefono"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_Wo1bcPiQEeS_QuN4fkSZRg" name="modificaProveedor" operationType="Modifier" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWkADSEeWYqIsQRV9k2g" name="p_Proveedor_OID" type="OID" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWkQDSEeWYqIsQRV9k2g" name="p_nombre"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWkgDSEeWYqIsQRV9k2g" name="p_pais"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWkwDSEeWYqIsQRV9k2g" name="p_provincia"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWlADSEeWYqIsQRV9k2g" name="p_direccion"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWlQDSEeWYqIsQRV9k2g" name="p_email"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWlgDSEeWYqIsQRV9k2g" name="p_divisa" type="Enum" typeEnum="_6Aj68ADIEeWYqIsQRV9k2g"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWlwDSEeWYqIsQRV9k2g" name="p_datosBancarios"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWmADSEeWYqIsQRV9k2g" name="p_descuento" type="Double"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWmQDSEeWYqIsQRV9k2g" name="p_diasCobro" type="Date" collectionType="List"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLMWmgDSEeWYqIsQRV9k2g" name="p_fechaAlta" type="Date"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLM9oADSEeWYqIsQRV9k2g" name="p_fechaUltimaModificacion" type="Date"/>
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLM9oQDSEeWYqIsQRV9k2g" name="p_telefono"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw40QAJJEeWU-OVmPRtMpw" name="p_Proveedor_OID" type="OID" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw40QQJJEeWU-OVmPRtMpw" name="p_nombre"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw40QgJJEeWU-OVmPRtMpw" name="p_pais"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bUAJJEeWU-OVmPRtMpw" name="p_provincia"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bUQJJEeWU-OVmPRtMpw" name="p_direccion"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bUgJJEeWU-OVmPRtMpw" name="p_email"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bUwJJEeWU-OVmPRtMpw" name="p_divisa" type="Enum" typeEnum="_6Aj68ADIEeWYqIsQRV9k2g"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bVAJJEeWU-OVmPRtMpw" name="p_datosBancarios"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bVQJJEeWU-OVmPRtMpw" name="p_descuento" type="Double"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bVgJJEeWU-OVmPRtMpw" name="p_diasCobro" type="Date" collectionType="List"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bVwJJEeWU-OVmPRtMpw" name="p_fechaAlta" type="Date"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bWAJJEeWU-OVmPRtMpw" name="p_fechaUltimaModificacion" type="Date"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bWQJJEeWU-OVmPRtMpw" name="p_telefono"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_aLpa4PiQEeS_QuN4fkSZRg" name="borraProveedor" operationType="Destroy" type="Void">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLM9ogDSEeWYqIsQRV9k2g" name="p_Proveedor_OID" type="OID" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw5bWgJJEeWU-OVmPRtMpw" name="p_Proveedor_OID" type="OID" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_dJIDMPiREeS_QuN4fkSZRg" name="dameProveedorPorOID" operationType="ReadOID" type="Object" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg">
-        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_PLM9owDSEeWYqIsQRV9k2g" name="p_Proveedor_OID" type="OID" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg"/>
+        <arguments xmi:type="es.ua.dlsi.ooh:Argument" xmi:id="_rw6CYAJJEeWU-OVmPRtMpw" name="p_Proveedor_OID" type="OID" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg"/>
       </operations>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_hWZ78PiREeS_QuN4fkSZRg" name="dameTodosLosProveedores" operationType="ReadAll" type="Object" collectionType="List" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg"/>
       <operations xmi:type="es.ua.dlsi.ooh:Operation" xmi:id="_nzpnsAFOEeWmkbe3uTLQCA" name="readFilter" operationType="ReadFilter" type="Object" collectionType="List" typeObject="_qJ8AYPiMEeS_QuN4fkSZRg" filter="FROM ProveedorEN c where c.Nif like CONCAT('%',:p_filter,'%') OR c.Nombre like CONCAT('%',:p_filter,'%') OR c.Email like CONCAT('%',:p_filter,'%') OR c.Direccion like CONCAT('%',:p_filter,'%') OR c.Divisa like CONCAT('%',:p_filter,'%') OR c.Pais like CONCAT('%',:p_filter,'%') OR c.Provincia like CONCAT('%',:p_filter,'%') OR c.Telefono like CONCAT('%',:p_filter,'%')" automaticSynchronize="false">

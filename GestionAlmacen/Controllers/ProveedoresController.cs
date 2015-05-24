@@ -36,14 +36,6 @@ namespace GestionStockGPI.Controllers
 
         private List<SelectListItem> generateDivisas()
         {
-           /* ProveedorCEN pCEN = new ProveedorCEN();
-            var proveedores = (from p in pCEN.DameTodosLosProveedores(0, 100)
-                               select new SelectListItem
-                               {
-                                   Text = p.Nombre + " - " + p.Email,
-                                   Value = p.Email.ToString()
-                               });*/
-
             IEnumerable<DivisaEnum> values = Enum.GetValues(typeof(DivisaEnum))
             .Cast<DivisaEnum>();
 
@@ -74,6 +66,9 @@ namespace GestionStockGPI.Controllers
             else
             {
 
+                DateTime fechaRegistro = DateTime.Now;
+                proveedor.FechaAlta = fechaRegistro;
+                proveedor.FechaUltimaModificacion = fechaRegistro;
                 proCEN.NuevoProveedor(proveedor.Nif, proveedor.Nombre, proveedor.Pais, proveedor.Provincia, proveedor.Direccion, proveedor.Email, proveedor.Divisa, proveedor.DatosBancarios, proveedor.Descuento, proveedor.DiasCobro, proveedor.FechaAlta, proveedor.FechaUltimaModificacion, proveedor.Telefono);
 
                 Response.Redirect("~/Proveedores/ListaProveedores");
@@ -106,6 +101,7 @@ namespace GestionStockGPI.Controllers
         [Authorize]
         public ActionResult EditProveedor(string nif)
         {
+
             ProveedorEN en = proCEN.DameProveedorPorOID(nif);
             return View(en);
         }
@@ -115,9 +111,13 @@ namespace GestionStockGPI.Controllers
         public ActionResult EditProveedor(ProveedorEN a)
         {
             if (a != null)
-                proCEN.ModificaProveedor(a.Nif, a.Nombre, a.Pais, a.Provincia, a.Direccion, a.Email, a.Divisa, a.DatosBancarios, a.Descuento, a.DiasCobro, a.FechaAlta, a.FechaUltimaModificacion, a.Telefono);
-                
+            {
+                DateTime fechaRegistro = DateTime.Now;
+                a.FechaUltimaModificacion = fechaRegistro;
 
+                proCEN.ModificaProveedor(a.Nif, a.Nombre, a.Pais, a.Provincia, a.Direccion, a.Email, a.Divisa, a.DatosBancarios, a.Descuento, a.DiasCobro, a.FechaAlta, a.FechaUltimaModificacion, a.Telefono);
+
+            }
             return RedirectToAction("ListaProveedores");
         }
 
