@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using GpiERGenNHibernate.EN.GpiER;
 using GpiERGenNHibernate.CEN.GpiER;
+using GpiERGenNHibernate.Enumerated.GpiER;
 
 namespace GestionStockGPI.Controllers
 {
@@ -26,8 +27,40 @@ namespace GestionStockGPI.Controllers
         [Authorize]
         public ActionResult NewProveedor()
         {
+            ViewData["Divisas"] = generateDivisas();
+
             return View();
         }
+
+
+
+        private List<SelectListItem> generateDivisas()
+        {
+           /* ProveedorCEN pCEN = new ProveedorCEN();
+            var proveedores = (from p in pCEN.DameTodosLosProveedores(0, 100)
+                               select new SelectListItem
+                               {
+                                   Text = p.Nombre + " - " + p.Email,
+                                   Value = p.Email.ToString()
+                               });*/
+
+            IEnumerable<DivisaEnum> values = Enum.GetValues(typeof(DivisaEnum))
+            .Cast<DivisaEnum>();
+
+            IEnumerable<SelectListItem> items =
+                from value in values
+                select new SelectListItem
+                {
+                    Text = value.ToString(),
+                    Value = value.ToString(),
+                    
+                };
+
+            return items.ToList();
+        }
+
+
+
 
         // URL: /Proveedores/NewProveedor (POST)
         [HttpPost]
