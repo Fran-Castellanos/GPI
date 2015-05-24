@@ -101,7 +101,7 @@ namespace GestionStockGPI.Controllers
         [Authorize]
         public ActionResult EditProveedor(string nif)
         {
-
+            ViewData["Divisas"] = generateDivisas();
             ProveedorEN en = proCEN.DameProveedorPorOID(nif);
             return View(en);
         }
@@ -112,6 +112,7 @@ namespace GestionStockGPI.Controllers
         {
             if (a != null)
             {
+
                 DateTime fechaRegistro = DateTime.Now;
                 a.FechaUltimaModificacion = fechaRegistro;
 

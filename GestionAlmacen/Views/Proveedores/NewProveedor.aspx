@@ -16,19 +16,19 @@
            </div>
            <div class="row margin-top">
                <div class="col-sm-2"><strong>Nombre</strong></div>
-               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Nombre, new { @class = "form-control", @type = "text", @pattern = "^([_A-z]){3,}$", @maxlength = "80", @required = "required" })%></div>
+               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Nombre, new { @class = "form-control", @type = "text", @pattern = "^([_A-z ñáéíóú]){3,}$", @maxlength = "80", @required = "required" })%></div>
            </div>
            <div  class="row margin-top">
                <div class="col-sm-2"><strong>País</strong></div>
-               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Pais, new { @class = "form-control", @type = "text", @pattern = "^([_A-z0-9]){3,}$", @maxlength = "40", @minlength = "9", @required = "required" })%></div>
+               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Pais, new { @class = "form-control", @type = "text", @pattern = "^([_A-z0-9 ñáéíóú]){3,}$", @maxlength = "40", @minlength = "9", @required = "required" })%></div>
            </div>
            <div  class="row margin-top">
                <div class="col-sm-2"><strong>Provincia</strong></div>
-               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Provincia, new { @class = "form-control", @type = "text", @pattern = "^([_A-z0-9]){3,}$", @maxlength = "50", @minlength = "9", @required = "required" })%></div>
+               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Provincia, new { @class = "form-control", @type = "text", @pattern = "^([_A-z0-9 ñáéíóú]){3,}$", @maxlength = "50", @minlength = "9", @required = "required" })%></div>
            </div>
            <div  class="row margin-top">
                <div class="col-sm-2"><strong>Dirección</strong></div>
-               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Direccion, new { @class = "form-control", @type = "text", @pattern = "^([_A-z0-9]){3,}$", @maxlength = "70", @minlength = "9", @required = "required" })%></div>
+               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Direccion, new { @class = "form-control", @type = "text", @pattern = "^([_A-z0-9 ñáéíóú]){3,}$", @maxlength = "70", @minlength = "9", @required = "required" })%></div>
            </div>
            <div class="row margin-top">
                <div class="col-sm-2"><strong>Correo electrónico</strong></div>
@@ -36,7 +36,7 @@
            </div>
            <div class="row margin-top">
                <div class="col-sm-2"><strong>Descuento (%)</strong></div>
-               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Descuento, new { @class = "form-control", @type = "number", @maxlength = "3", @required = "required" })%></div>
+               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Descuento, new { @class = "form-control", @type = "number", @min = "0", @max="100", @maxlength = "3", @required = "required" })%></div>
            </div>
            <div class="row margin-top">
                <div class="col-sm-2"><strong>Datos bancarios</strong></div>
