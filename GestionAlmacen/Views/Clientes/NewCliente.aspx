@@ -45,7 +45,7 @@
            </div>
            <div class="row margin-top">
                <div class="col-sm-2"><strong>Riesgos permitidos</strong></div>
-               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.RiesgosPermitidos, new { @class = "form-control", @type = "number", @maxlength = "10", @required = "required" })%></div>
+               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.RiesgosPermitidos, new { @class = "form-control", @min="0", @type = "number", @maxlength = "10", @required = "required" })%></div>
            </div>
            <div class="row margin-top">
                <div class="col-sm-2"><strong>Datos bancarios</strong></div>
