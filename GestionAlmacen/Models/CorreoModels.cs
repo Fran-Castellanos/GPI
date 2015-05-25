@@ -79,11 +79,10 @@ namespace GestionStockGPI.Models
             email.IsBodyHtml = false;
             email.Priority = MailPriority.Normal;
             
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com";
-            smtp.Port = 25;
-            smtp.EnableSsl = false;
-            smtp.UseDefaultCredentials = false;
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            
+            smtp.EnableSsl = true;
+            
             smtp.Credentials = new NetworkCredential(From, Password);
 
             try{

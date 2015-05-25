@@ -60,8 +60,9 @@ namespace GestionStockGPI.Controllers
             try
             {
                 correo_model.enviarMensaje();
+                correo_model.Denegados = new List<String>();
 
-                if (correo_model.Denegados.Count > 0)
+                if (correo_model.Denegados!=null && correo_model.Denegados.Count > 0)
                 {
                     String m = "No se ha podido enviar el mensaje a:\n";
                     foreach (String mail in correo_model.Denegados)
