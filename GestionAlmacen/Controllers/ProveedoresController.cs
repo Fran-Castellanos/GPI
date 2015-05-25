@@ -116,10 +116,66 @@ namespace GestionStockGPI.Controllers
         [Authorize]
         public ActionResult EditProveedor(string nif)
         {
+
             ViewData["Divisas"] = generateDivisas();
             ProveedorEN en = proCEN.DameProveedorPorOID(nif);
+
+            en.Dias = "";
+            int L = 0;
+            int i = 0;
+            try
+            {
+                if (en.DiasCobro != null)
+                {
+                    IList<DateTime?> dias = en.DiasCobro;
+                    L = dias.Count;
+                    foreach (DateTime d in en.DiasCobro)
+                    {
+                        if (i != 0)
+                            en.Dias += ",";
+
+                        string dia = "";
+                        string mes = "";
+                        string anyo = "";
+
+                        if (d.Day < 10)
+                        {
+                            dia = "0";
+                        }
+                        dia += d.Day;
+
+                        if (d.Month < 10)
+                        {
+                            mes = "0";
+                        }
+                        mes += d.Month;
+
+                        if (d.Year < 10)
+                        {
+                            anyo = "0";
+                        }
+                        anyo += d.Year;
+
+
+                        en.Dias += dia + "/" + mes + "/" + anyo;
+
+                        ++i;
+                    }
+                }
+                else
+                {
+
+                }
+
+            }
+            catch (Exception e)
+            {
+            }
+
+
             return View(en);
         }
+
 
 
         [HttpPost]
@@ -127,9 +183,26 @@ namespace GestionStockGPI.Controllers
         {
             if (a != null)
             {
+                String[] fechas = a.Dias.Split(',');
+                IList<DateTime?> dias = new List<DateTime?>();
+
+                foreach (String f in fechas)
+                {
+                    String[] param = f.Split('/');
+                    int anyo = Convert.ToInt32(param[2]);
+                    int mes = Convert.ToInt32(param[1]);
+                    int dia = Convert.ToInt32(param[0]);
+                    DateTime d = new DateTime(anyo, mes, dia);
+                    dias.Add(d);
+                }
+
+                a.DiasCobro = dias;
 
                 DateTime fechaRegistro = DateTime.Now;
                 a.FechaUltimaModificacion = fechaRegistro;
+
+                ProveedorEN c = proCEN.DameProveedorPorOID(a.Nif);
+                a.FechaAlta = c.FechaAlta;
 
                 proCEN.ModificaProveedor(a.Nif, a.Nombre, a.Pais, a.Provincia, a.Direccion, a.Email, a.Divisa, a.DatosBancarios, a.Descuento, a.DiasCobro, a.FechaAlta, a.FechaUltimaModificacion, a.Telefono);
 

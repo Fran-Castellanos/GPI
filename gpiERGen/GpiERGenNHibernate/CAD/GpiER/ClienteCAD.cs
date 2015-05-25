@@ -8,6 +8,8 @@ using NHibernate.Criterion;
 using NHibernate.Exceptions;
 using GpiERGenNHibernate.EN.GpiER;
 using GpiERGenNHibernate.Exceptions;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace GpiERGenNHibernate.CAD.GpiER
 {
@@ -32,6 +34,9 @@ public ClienteEN ReadOIDDefault (string nif)
                 SessionInitializeTransaction ();
                 clienteEN = (ClienteEN)session.Get (typeof(ClienteEN), nif);
                 SessionCommit ();
+
+                IList<DateTime?> dias = clienteEN.DiasPago;
+                clienteEN.DiasPago = dias;
         }
 
         catch (Exception ex) {
@@ -55,6 +60,7 @@ public string NuevoCliente (ClienteEN cliente)
 {
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
 
                 session.Save (cliente);
@@ -81,6 +87,7 @@ public void ModificaCliente (ClienteEN cliente)
 {
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 ClienteEN clienteEN = (ClienteEN)session.Load (typeof(ClienteEN), cliente.Nif);
 
@@ -149,6 +156,7 @@ public void BorraCliente (string nif)
 {
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 ClienteEN clienteEN = (ClienteEN)session.Load (typeof(ClienteEN), nif);
                 session.Delete (clienteEN);
@@ -175,9 +183,15 @@ public ClienteEN DameClientePorOID (string nif)
 
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 clienteEN = (ClienteEN)session.Get (typeof(ClienteEN), nif);
+
                 SessionCommit ();
+
+                IList<DateTime?> dias = clienteEN.DiasPago;
+                clienteEN.DiasPago = dias;
+                
         }
 
         catch (Exception ex) {
@@ -190,7 +204,7 @@ public ClienteEN DameClientePorOID (string nif)
 
         finally
         {
-                SessionClose ();
+            //SessionClose();
         }
 
         return clienteEN;
@@ -201,6 +215,7 @@ public System.Collections.Generic.IList<ClienteEN> DameTodosLosClientes (int fir
         System.Collections.Generic.IList<ClienteEN> result = null;
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 if (size > 0)
                         result = session.CreateCriteria (typeof(ClienteEN)).
@@ -231,6 +246,7 @@ public System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ClienteEN> R
         System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ClienteEN> result;
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 //String sql = @"FROM ClienteEN self where FROM ClienteEN c where c.Nif like CONCAT('%',:p_filter,'%') OR c.Nombre like CONCAT('%',:p_filter,'%') OR c.Email like CONCAT('%',:p_filter,'%') OR c.Direccion like CONCAT('%',:p_filter,'%') OR c.DireccionEnvio like CONCAT('%',:p_filter,'%')  OR c.Pais like CONCAT('%',:p_filter,'%') OR c.Provincia like CONCAT('%',:p_filter,'%') OR c.Telefono like CONCAT('%',:p_filter,'%')";
                 //IQuery query = session.CreateQuery(sql);

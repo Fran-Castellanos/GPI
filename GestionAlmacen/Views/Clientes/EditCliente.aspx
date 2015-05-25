@@ -77,21 +77,19 @@
            </div>
            
 
-            <div class="row margin-top">
-               
-                <div class="form-group">
-                        <div id="Div1">
-                            <div class="input-group input-daterange" id="datepicker">
-                                <span class="input-group-addon">Días de pago</span>
-                                <input type="text" class="form-control" name="DiasPago" value="" placeholder="Seleccione días de pago"/>
-                                <span class="input-group-btn">
-                                </span>
-                            </div>
+             <div class="row margin-top">
+               <div class="col-sm-2"><strong>Días de pago</strong></div>
+               <div class="col-sm-10">
+                    <div class="form-group" id="sandbox-container">
+                        <div class='input-group date' id="datepicker">
+                            <%: Html.TextBoxFor(m => m.Dias , new { @class = "form-control", @required = "required" })%>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
                         </div>
-                            
                     </div>
-
-           </div>
+               </div>
+            </div>
 
 
         <div class="row margin-top text-right">
@@ -107,11 +105,11 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
     <script type="text/javascript">
         $('select').select2({
-            language: "es",
+            language: "es", 
             placeholder: "Seleccione una divisa"
         });
         $('#datepicker').datepicker({
-                multidate: true,
+                multidate: true,format: "dd/mm/yyyy",
             });
 
             $('#sandbox-container .input-daterange').datepicker({

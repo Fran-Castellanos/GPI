@@ -25,6 +25,5 @@ C:\Users\Paco\Documents\GitHub\GPI\gpiERGen\GpiERGenNHibernate\bin\Debug\NHibern
 C:\Users\Paco\Documents\GitHub\GPI\gpiERGen\GpiERGenNHibernate\bin\Debug\Iesi.Collections.dll
 C:\Users\Paco\Documents\GitHub\GPI\gpiERGen\GpiERGenNHibernate\bin\Debug\Antlr3.Runtime.dll
 C:\Users\Paco\Documents\GitHub\GPI\gpiERGen\GpiERGenNHibernate\bin\Debug\log4net.dll
-C:\Users\Paco\Documents\GitHub\GPI\gpiERGen\GpiERGenNHibernate\obj\Debug\GpiERGenNHibernate.csprojResolveAssemblyReference.cache
 C:\Users\Paco\Documents\GitHub\GPI\gpiERGen\GpiERGenNHibernate\obj\Debug\GpiERGenNHibernate.dll
 C:\Users\Paco\Documents\GitHub\GPI\gpiERGen\GpiERGenNHibernate\obj\Debug\GpiERGenNHibernate.pdb

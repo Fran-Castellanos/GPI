@@ -29,6 +29,7 @@ public ProveedorEN ReadOIDDefault (string nif)
 
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 proveedorEN = (ProveedorEN)session.Get (typeof(ProveedorEN), nif);
                 SessionCommit ();
@@ -55,6 +56,7 @@ public string NuevoProveedor (ProveedorEN proveedor)
 {
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
 
                 session.Save (proveedor);
@@ -81,6 +83,7 @@ public void ModificaProveedor (ProveedorEN proveedor)
 {
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 ProveedorEN proveedorEN = (ProveedorEN)session.Load (typeof(ProveedorEN), proveedor.Nif);
 
@@ -140,6 +143,7 @@ public void BorraProveedor (string nif)
 {
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 ProveedorEN proveedorEN = (ProveedorEN)session.Load (typeof(ProveedorEN), nif);
                 session.Delete (proveedorEN);
@@ -166,6 +170,7 @@ public ProveedorEN DameProveedorPorOID (string nif)
 
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 proveedorEN = (ProveedorEN)session.Get (typeof(ProveedorEN), nif);
                 SessionCommit ();
@@ -181,7 +186,7 @@ public ProveedorEN DameProveedorPorOID (string nif)
 
         finally
         {
-                SessionClose ();
+                //SessionClose ();
         }
 
         return proveedorEN;
@@ -192,6 +197,7 @@ public System.Collections.Generic.IList<ProveedorEN> DameTodosLosProveedores (in
         System.Collections.Generic.IList<ProveedorEN> result = null;
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 if (size > 0)
                         result = session.CreateCriteria (typeof(ProveedorEN)).
@@ -222,6 +228,7 @@ public System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN>
         System.Collections.Generic.IList<GpiERGenNHibernate.EN.GpiER.ProveedorEN> result;
         try
         {
+            SessionClose();
                 SessionInitializeTransaction ();
                 //String sql = @"FROM ProveedorEN self where FROM ProveedorEN c where c.Nif like CONCAT('%',:p_filter,'%') OR c.Nombre like CONCAT('%',:p_filter,'%') OR c.Email like CONCAT('%',:p_filter,'%') OR c.Direccion like CONCAT('%',:p_filter,'%') OR c.Divisa like CONCAT('%',:p_filter,'%') OR c.Pais like CONCAT('%',:p_filter,'%') OR c.Provincia like CONCAT('%',:p_filter,'%') OR c.Telefono like CONCAT('%',:p_filter,'%')";
                 //IQuery query = session.CreateQuery(sql);
