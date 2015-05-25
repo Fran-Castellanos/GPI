@@ -23,6 +23,8 @@ private string nombre;
 
 private string pais;
 
+private string dias;
+
 /**
  *
  */
@@ -91,6 +93,11 @@ private string telefono;
 
 
 
+
+public virtual string Dias {
+    get { return dias; }
+    set { dias = value; }
+}
 
 
 public virtual string Nif {

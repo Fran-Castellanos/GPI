@@ -65,6 +65,21 @@ namespace GestionStockGPI.Controllers
             }
             else
             {
+                String[] fechas = proveedor.Dias.Split(',');
+                IList<DateTime?> dias = new List<DateTime?>();
+
+                foreach (String f in fechas)
+                {
+                    String[] param = f.Split('/');
+                    int anyo = Convert.ToInt32(param[2]);
+                    int mes = Convert.ToInt32(param[1]);
+                    int dia = Convert.ToInt32(param[0]);
+                    DateTime d = new DateTime(anyo, mes, dia);
+                    dias.Add(d);
+                }
+
+                proveedor.DiasCobro = dias;
+
 
                 DateTime fechaRegistro = DateTime.Now;
                 proveedor.FechaAlta = fechaRegistro;

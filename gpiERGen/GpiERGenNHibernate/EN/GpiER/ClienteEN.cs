@@ -15,6 +15,9 @@ private string nif;
  *
  */
 
+
+private string dias;
+
 private string nombre;
 
 /**
@@ -110,6 +113,11 @@ private string telefono;
 
 
 
+public virtual string Dias
+{
+    get { return dias; }
+    set { dias = value; }
+}
 
 public virtual string Nif {
         get { return nif; } set { nif = value;  }
