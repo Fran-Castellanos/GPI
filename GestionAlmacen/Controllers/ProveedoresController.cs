@@ -28,6 +28,7 @@ namespace GestionStockGPI.Controllers
         public ActionResult NewProveedor()
         {
             ViewData["Divisas"] = generateDivisas();
+            ViewData["Paises"] = generatePaises();
 
             return View();
         }
@@ -52,6 +53,25 @@ namespace GestionStockGPI.Controllers
         }
 
 
+        private object generatePaises()
+        {
+            IEnumerable<PaisEnum> values = Enum.GetValues(typeof(PaisEnum))
+           .Cast<PaisEnum>();
+
+            IEnumerable<SelectListItem> items =
+                from value in values
+                select new SelectListItem
+                {
+                    Text = (value.ToString()).Replace("_", " "),
+                    Value = value.ToString(),
+
+                };
+
+            return items.ToList();
+        }
+
+
+
 
 
         // URL: /Proveedores/NewProveedor (POST)
@@ -65,6 +85,7 @@ namespace GestionStockGPI.Controllers
             }
             else
             {
+                proveedor.Pais = proveedor.PaisEnum.ToString().Replace("_", " ");
                 String[] fechas = proveedor.Dias.Split(',');
                 IList<DateTime?> dias = new List<DateTime?>();
 
@@ -112,14 +133,47 @@ namespace GestionStockGPI.Controllers
 
 
 
+
+        private void convertirPais2Enum(ProveedorEN en)
+        {
+            IEnumerable<PaisEnum> values = Enum.GetValues(typeof(PaisEnum))
+            .Cast<PaisEnum>();
+
+            IEnumerable<SelectListItem> items =
+                from value in values
+                select new SelectListItem
+                {
+                    Text = value.ToString().Replace("_", " "),
+                    Value = value.ToString(),
+
+                };
+
+            foreach (SelectListItem s in items)
+            {
+                if (s.Text == en.Pais)
+                {
+                    PaisEnum p;
+                    Enum.TryParse(s.Value, out p);
+                    en.PaisEnum = p;
+                    return;
+
+                }
+            }
+
+            return;
+        }
+
+
+
+
         // GET: /Proveedores/EditProveedor
         [Authorize]
         public ActionResult EditProveedor(string nif)
         {
-
+            ViewData["Paises"] = generatePaises();
             ViewData["Divisas"] = generateDivisas();
             ProveedorEN en = proCEN.DameProveedorPorOID(nif);
-
+            convertirPais2Enum(en);
             en.Dias = "";
             int L = 0;
             int i = 0;
@@ -203,6 +257,8 @@ namespace GestionStockGPI.Controllers
 
                 ProveedorEN c = proCEN.DameProveedorPorOID(a.Nif);
                 a.FechaAlta = c.FechaAlta;
+
+                a.Pais = a.PaisEnum.ToString().Replace("_", " ");
 
                 proCEN.ModificaProveedor(a.Nif, a.Nombre, a.Pais, a.Provincia, a.Direccion, a.Email, a.Divisa, a.DatosBancarios, a.Descuento, a.DiasCobro, a.FechaAlta, a.FechaUltimaModificacion, a.Telefono);
 

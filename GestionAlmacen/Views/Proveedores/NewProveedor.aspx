@@ -18,10 +18,12 @@
                <div class="col-sm-2"><strong>Nombre</strong></div>
                <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Nombre, new { @class = "form-control", @type = "text", @pattern = "^([_A-z ñáéíóú]){3,}$", @maxlength = "80", @required = "required" })%></div>
            </div>
-           <div  class="row margin-top">
+           <div class="row margin-top">
                <div class="col-sm-2"><strong>País</strong></div>
-               <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Pais, new { @class = "form-control", @type = "text", @pattern = "^([_A-z0-9 ñáéíóú]){3,}$", @maxlength = "40", @minlength = "9", @required = "required" })%></div>
-           </div>
+               <div class="col-sm-10">
+                   <%= Html.DropDownListFor(m => m.PaisEnum, (IEnumerable<SelectListItem>)ViewData["Paises"], new {@class = "form-control" })%>
+               </div>
+            </div>
            <div  class="row margin-top">
                <div class="col-sm-2"><strong>Provincia</strong></div>
                <div class="col-sm-10"><%: Html.TextBoxFor(m => m.Provincia, new { @class = "form-control", @type = "text", @pattern = "^([_A-z0-9 ñáéíóú]){3,}$", @maxlength = "50", @minlength = "9", @required = "required" })%></div>

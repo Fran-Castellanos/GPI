@@ -1,5 +1,6 @@
 
 using System;
+using GpiERGenNHibernate.Enumerated.GpiER;
 
 namespace GpiERGenNHibernate.EN.GpiER
 {
@@ -19,6 +20,8 @@ private string nif;
 private string dias;
 
 private string nombre;
+
+
 
 /**
  *
@@ -111,7 +114,13 @@ private Nullable<DateTime> fechaUltimaModificacion;
 private string telefono;
 
 
+private PaisEnum paisEnum;
 
+public virtual PaisEnum PaisEnum
+{
+    get { return paisEnum; }
+    set { paisEnum = value; }
+}
 
 public virtual string Dias
 {

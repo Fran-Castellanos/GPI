@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using GpiERGenNHibernate.EN.GpiER;
 using GpiERGenNHibernate.CEN.GpiER;
+using GpiERGenNHibernate.Enumerated.GpiER;
 
 namespace GestionStockGPI.Controllers
 {
@@ -34,6 +35,8 @@ namespace GestionStockGPI.Controllers
         [Authorize]
         public ActionResult NewCliente()
         {
+            ViewData["Paises"] = generatePaises();
+
             return View();
         }
 
@@ -50,7 +53,8 @@ namespace GestionStockGPI.Controllers
             {
                 String[] fechas = cliente.Dias.Split(',');
                 IList<DateTime?> dias = new List<DateTime?>();
-               
+
+                cliente.Pais = cliente.PaisEnum.ToString().Replace("_"," ");
                 foreach (String f in fechas)
                 {
                     String[] param = f.Split('/');
@@ -88,11 +92,46 @@ namespace GestionStockGPI.Controllers
 
 
 
+        private void convertirPais2Enum(ClienteEN en)
+        {
+            IEnumerable<PaisEnum> values = Enum.GetValues(typeof(PaisEnum))
+            .Cast<PaisEnum>();
+
+            IEnumerable<SelectListItem> items =
+                from value in values
+                select new SelectListItem
+                {
+                    Text = value.ToString().Replace("_", " "),
+                    Value = value.ToString(),
+
+                };
+
+            foreach (SelectListItem s in items)
+            {
+                if (s.Text == en.Pais)
+                {
+                    PaisEnum p;
+                    Enum.TryParse(s.Value, out p);
+                    en.PaisEnum = p;
+                    return;
+                    
+                }
+            }
+
+            return;
+        }
+
+
+
+
         // GET: /Articulos/EditArticulo
         [Authorize]
         public ActionResult EditCliente(string nif)
         {
+            ViewData["Paises"] = generatePaises();
             ClienteEN en = clienteCEN.DameClientePorOID(nif);
+
+            convertirPais2Enum(en);
 
             en.Dias = "";
             int L = 0;
@@ -153,11 +192,35 @@ namespace GestionStockGPI.Controllers
             return View(en);
         }
 
+
+
+        private object generatePaises()
+        {
+            IEnumerable<PaisEnum> values = Enum.GetValues(typeof(PaisEnum))
+           .Cast<PaisEnum>();
+
+            IEnumerable<SelectListItem> items =
+                from value in values
+                select new SelectListItem
+                {
+                    Text = (value.ToString()).Replace("_"," "),
+                    Value = value.ToString(),
+
+                };
+
+            return items.ToList();
+        }
+
+
+
+
+
         [HttpPost]
         public ActionResult EditCliente(ClienteEN a)
         {
             if (a != null)
             {
+                a.Pais = a.PaisEnum.ToString().Replace("_", " ");
                 String[] fechas = a.Dias.Split(',');
                 IList<DateTime?> dias = new List<DateTime?>();
 
