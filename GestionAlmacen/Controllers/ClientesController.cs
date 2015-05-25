@@ -73,8 +73,18 @@ namespace GestionStockGPI.Controllers
                 cliente.DatosContables = "0";
                 cliente.TipoDescuento = GpiERGenNHibernate.Enumerated.GpiER.TipoDescuentoEnum.OTRO;
 
-                clienteCEN.NuevoCliente(cliente.Nif, cliente.Nombre, cliente.Pais, cliente.Provincia, cliente.Direccion, cliente.Email, cliente.DatosBancarios, cliente.DiasPago, cliente.TipoDescuento, cliente.Descuento, cliente.RiesgosPermitidos, cliente.DatosContables, cliente.DireccionEnvio, cliente.FechaAlta, cliente.FechaUltimaModificacion, cliente.Telefono);
-                Response.Redirect("~/Clientes/ListaClientes");
+                try
+                {
+                    clienteCEN.NuevoCliente(cliente.Nif, cliente.Nombre, cliente.Pais, cliente.Provincia, cliente.Direccion, cliente.Email, cliente.DatosBancarios, cliente.DiasPago, cliente.TipoDescuento, cliente.Descuento, cliente.RiesgosPermitidos, cliente.DatosContables, cliente.DireccionEnvio, cliente.FechaAlta, cliente.FechaUltimaModificacion, cliente.Telefono);
+                }
+                catch (Exception e)
+                {
+                    String PathPagina = "../Proveedores/ListaProveedores";
+                    Response.Write("<script>alert ('" + "No se ha podido registrar el proveedor. Ese NIF ya existe en la BD." + "');location.href='" + PathPagina + "'</script>");
+                    return;
+                }
+                    
+                    Response.Redirect("~/Clientes/ListaClientes");
             }
         }
 

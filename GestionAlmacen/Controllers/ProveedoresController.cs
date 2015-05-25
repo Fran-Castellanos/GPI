@@ -105,7 +105,19 @@ namespace GestionStockGPI.Controllers
                 DateTime fechaRegistro = DateTime.Now;
                 proveedor.FechaAlta = fechaRegistro;
                 proveedor.FechaUltimaModificacion = fechaRegistro;
-                proCEN.NuevoProveedor(proveedor.Nif, proveedor.Nombre, proveedor.Pais, proveedor.Provincia, proveedor.Direccion, proveedor.Email, proveedor.Divisa, proveedor.DatosBancarios, proveedor.Descuento, proveedor.DiasCobro, proveedor.FechaAlta, proveedor.FechaUltimaModificacion, proveedor.Telefono);
+
+                try
+                {
+                    proCEN.NuevoProveedor(proveedor.Nif, proveedor.Nombre, proveedor.Pais, proveedor.Provincia, proveedor.Direccion, proveedor.Email, proveedor.Divisa, proveedor.DatosBancarios, proveedor.Descuento, proveedor.DiasCobro, proveedor.FechaAlta, proveedor.FechaUltimaModificacion, proveedor.Telefono);
+
+                    
+                }
+                catch (Exception e)
+                {
+                    String PathPagina = "../Proveedores/ListaProveedores";
+                    Response.Write("<script>alert ('" + "No se ha podido registrar el proveedor. Ese NIF ya existe en la BD." + "');location.href='" + PathPagina + "'</script>");
+                    return;
+                }
 
                 Response.Redirect("~/Proveedores/ListaProveedores");
             }
